@@ -18,6 +18,7 @@ const config: Config = {
         primaryGreen: "#039855",
         grayishAsh: "#98A2B3",
         lightGray: "#D0D5DD",
+        muted: "#344054",
       }  ,
       backgroundImage: {
         heroBg: "url('/LoubbyHeroBgSection.webp')"

@@ -3,7 +3,7 @@ import React from "react";
 
 const HeroSection = () => {
     return (
-        <div className="bg-[rgb(249,250,251)] pb-12  relative">
+        <div className="bg-[rgb(249,250,251)] pb-16  relative">
             <div className="absolute -top-24 bg-heroBg bg-no-repeat z-10  w-full h-full" />
             <div className="z-30 mt-20 mb-5 space-y-5 pt-20 relative">
                 <h1 className="text-center text-6xl font-bold leading-[4.4rem]">

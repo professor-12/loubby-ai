@@ -3,7 +3,13 @@
 @tailwind utilities;
 
 html {
-    
+
     -webkit-text-size-adjust: 100%;
+}
+
+@layer {
+    p  ,li  {
+        @apply text-muted
+    }
 }
 
