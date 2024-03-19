@@ -38,7 +38,7 @@ const NavBar = () => {
                     </nav>
                 </div>
 
-                <div className="space-x-4">
+                <div className="space-x-2">
                     <Button className="bg-lightOpacityBlue  text-blue-800 font-semibold px-5 rounded-lg p-3">
                         Login
                     </Button>
