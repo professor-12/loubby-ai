@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  
   ],
   theme: {
     extend: {
@@ -17,6 +18,9 @@ const config: Config = {
         primaryGreen: "#039855",
         grayishAsh: "#98A2B3",
         lightGray: "#D0D5DD",
+      }  ,
+      backgroundImage: {
+        heroBg: "url('/LoubbyHeroBgSection.webp')"
       }
     },
   },
