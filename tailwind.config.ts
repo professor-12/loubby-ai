@@ -19,9 +19,11 @@ const config: Config = {
         grayishAsh: "#98A2B3",
         lightGray: "#D0D5DD",
         muted: "#344054",
+        lightOpacityGreen:"#ECFDF3"
       }  ,
       backgroundImage: {
-        heroBg: "url('/LoubbyHeroBgSection.webp')"
+        heroBg: "url('/LoubbyHeroBgSection.webp')",
+        "subtract-1": "url('/Subtract-1.png')"
       }
     },
   },

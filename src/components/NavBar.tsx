@@ -6,7 +6,7 @@ import { RxCaretDown } from "react-icons/rx";
 
 const NavBar = () => {
     return (
-        <header className="bg-white z-[10000] left-0 right-0 shadow-inner   fixed w-full top-0  h-[5.25rem] flex items-center">
+        <header className="bg-white z-[10000] left-0 right-0 shadow-inner  fixed w-full top-0  h-[5.25rem] flex items-center">
             <div className="container bg-white items-center mx-auto xl:w-[75%] flex justify-between">
                 <div className="flex bg-white gap-8 items-center">
                     <Link href={"/"}>

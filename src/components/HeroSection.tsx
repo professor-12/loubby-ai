@@ -25,11 +25,16 @@ const HeroSection = () => {
             </div>
 
             <div className="flex items-center relative z-50 justify-center">
-                <Image src={"/DashBoard.png"} alt="HeroImageDashBoard" className="drop-shadow-2xl rounded-xl" width={1100} height={100} />
+                <Image
+                    src={"/DashBoard.png"}
+                    alt="HeroImageDashBoard"
+                    className="drop-shadow-2xl rounded-xl"
+                    width={1100}
+                    height={100}
+                />
             </div>
         </div>
     );
 };
 
-
-export default HeroSection
+export default HeroSection;
