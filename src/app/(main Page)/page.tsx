@@ -1,6 +1,6 @@
 import HeroSection from '@/components/HeroSection'
 import NavBar from '@/components/NavBar'
-import Pagination from '@/components/SlideShow1'
+import SlideShow2 from '@/components/SlideShow2'
 import Stats from '@/components/Stats'
 import React from 'react'
 
@@ -10,7 +10,7 @@ const Page = () => {
       <NavBar />
       <HeroSection />
       <Stats />
-      <Pagination/>
+      <SlideShow2/>
     </div>
   )
 }
