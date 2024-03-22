@@ -1,38 +1,14 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { FaBriefcase } from "react-icons/fa6";
-import { BiSolidMessageDetail } from "react-icons/bi";
-import { IoMdListBox } from "react-icons/io";
+import React from "react";
+import { array } from "@/lib/slideShow1";
 import Image from "next/image";
 import { SlideShowItems } from "@/lib/slideShow1";
+import useSlideShow from "@/hooks/useSlideShowHooks";
 
 const Pagination = () => {
-    const [index, setIndex] = useState(0);
-    const array = [
-        { text: "Job Portal", color: "#DC6803", svg: <FaBriefcase /> },
-        { text: "Interviews", color: "#1A73E8", svg: <BiSolidMessageDetail /> },
-        { text: "Talent Pool", color: "#039855", svg: <FaBriefcase /> },
-        { text: "Company Job Page", color: "#1A73E8", svg: <IoMdListBox /> },
-    ];
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prev) => {
-                if (prev === 3) {
-                    return 0;
-                } else {
-                    return prev + 1;
-                }
-            });
-        }, 3000);
-
-        return () => {
-            clearInterval(interval);
-        };
-    }, [index]);
-
+    const { index, setIndex } = useSlideShow(0, 3, 3000);
     return (
-        <div className="container mx-auto my-3">
+        <div className="container mx-auto my-12">
             <div>
                 <h1 className="text-5xl tracking-wide leading-[3.1rem] text-center font-semibold">
                     Streamline your <br /> talent hiring process
@@ -43,8 +19,8 @@ const Pagination = () => {
                 </p>
             </div>
 
-            <nav className="mx-auto flex justify-center">
-                <ul className="flex justify-center flex-wrap space-x-8 text-[#DC6803]  text-lg  py-3">
+            <nav className="mx-auto flex justify-center gap-3">
+                <ul className="flex justify-center flex-wrap space-x-4 text-[#DC6803]  text-lg  py-3">
                     {array.map((text, i) => {
                         return (
                             <button
