@@ -40,7 +40,7 @@ const NavBar = () => {
 
                 <div className="space-x-2">
                     <Button className="bg-lightOpacityBlue  text-blue-800 font-semibold px-5 rounded-lg p-3">
-                        Login
+                       Sign up/Login
                     </Button>
                     <Button className="bg-primaryBlue  text-white font-semibold px-5 rounded-lg p-3">
                         Book a Demo

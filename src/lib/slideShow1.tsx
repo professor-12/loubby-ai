@@ -1,6 +1,10 @@
 import { IoMdListBox } from "react-icons/io";
 import { FaBriefcase } from "react-icons/fa6";
 import { BiSolidMessageDetail } from "react-icons/bi";
+import { AiFillQuestionCircle } from "react-icons/ai";
+import { BsFillCreditCard2FrontFill } from "react-icons/bs";
+import { GrRobot } from "react-icons/gr";
+import { MdOutlineDesktopMac } from "react-icons/md";
 
 export const SlideShowItems = [
     {
@@ -34,10 +38,56 @@ export const SlideShowItems = [
         color: "#1A73E8",
     },
 ];
+export const SlideShowItems2 = [
+    {
+        title: "Quizzes and Assessments​",
+        header: "Comprehensive Candidate Assessments",
+        body: "Conduct thorogh candidate assessments with Loubby’s robust assessment platform. Customize assessments to evaluate skills, knowledge, and suitability for the job. Gain deeper insights into candidates’ abilities and make informed hiring decisions",
+        img: "/Section.png",
+        color: "#1A73E8",
+    },
+    {
+        title: "Score Cards",
+        header: "Objective Candidate Evaluation with Score Cards",
+        body: "Make objective hiring decisions using Loubby’s score card feature. Define evaluation criteria and rate candidates consistently. Compare and rank candidates based on predefined metrics to select the best fit for your organization.",
+        img: "/Frame-428.png",
+        color: "#DC6803",
+    },
+    {
+        title: "AI Screening",
+        header: "Efficient Candidate Screening with AI-powered Tools",
+        body: "Streamline your candidate screening process using Loubby’s AI-powered screening tools. Automate the initial screening phase to quickly identify top candidates and focus your attention on the most promising applicants.",
+        img: "/Section-1.png",
+        color: "#039855",
+    },
+
+    {
+        title: "Collaborative Tools",
+        header: "Enhance Collaboration in the Hiring Process",
+        body: "Foster collaboration between hiring teams and candidates and streamline communication with Loubby’s collaborative tools. Enable seamless sharing of information and feedback exchange to ensure a cohesive and efficient hiring process.",
+        img: "/Profile-card-2.png",
+        color: "#1A73E8",
+    },
+];
 
 export const array = [
     { text: "Job Portal", color: "#DC6803", svg: <FaBriefcase /> },
     { text: "Interviews", color: "#1A73E8", svg: <BiSolidMessageDetail /> },
     { text: "Talent Pool", color: "#039855", svg: <FaBriefcase /> },
     { text: "Company Job Page", color: "#1A73E8", svg: <IoMdListBox /> },
+];
+
+export const array2 = [
+    { text: "Quiz Assesment", color: "#1A73E8", svg: <AiFillQuestionCircle /> },
+    {
+        text: "Score Cards",
+        color: "#DC6803",
+        svg: <BsFillCreditCard2FrontFill />,
+    },
+    { text: "Ai Screening", color: "#039855", svg: <GrRobot /> },
+    {
+        text: "Collaborative Tools",
+        color: "#1A73E8",
+        svg: <MdOutlineDesktopMac />,
+    },
 ];
