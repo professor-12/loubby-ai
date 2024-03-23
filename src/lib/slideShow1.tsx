@@ -38,6 +38,14 @@ export const SlideShowItems = [
         color: "#1A73E8",
     },
 ];
+
+export const array = [
+    { text: "Job Portal", color: "#DC6803", svg: <FaBriefcase /> },
+    { text: "Interviews", color: "#1A73E8", svg: <BiSolidMessageDetail /> },
+    { text: "Talent Pool", color: "#039855", svg: <FaBriefcase /> },
+    { text: "Company Job Page", color: "#1A73E8", svg: <IoMdListBox /> },
+];
+
 export const SlideShowItems2 = [
     {
         title: "Quizzes and Assessments​",
@@ -70,13 +78,6 @@ export const SlideShowItems2 = [
     },
 ];
 
-export const array = [
-    { text: "Job Portal", color: "#DC6803", svg: <FaBriefcase /> },
-    { text: "Interviews", color: "#1A73E8", svg: <BiSolidMessageDetail /> },
-    { text: "Talent Pool", color: "#039855", svg: <FaBriefcase /> },
-    { text: "Company Job Page", color: "#1A73E8", svg: <IoMdListBox /> },
-];
-
 export const array2 = [
     { text: "Quiz Assesment", color: "#1A73E8", svg: <AiFillQuestionCircle /> },
     {
@@ -87,6 +88,104 @@ export const array2 = [
     { text: "Ai Screening", color: "#039855", svg: <GrRobot /> },
     {
         text: "Collaborative Tools",
+        color: "#1A73E8",
+        svg: <MdOutlineDesktopMac />,
+    },
+];
+
+export const SlideShowItems3 = [
+    {
+        title: "Candidate Onboarding and Compliance​",
+        header: `Streamlined Candidate  Onboarding and Compliance`,
+        body: "Elevate your onboarding process with Loubby’s intuitive candidate onboarding feature. From offer acceptance to first-day essentials, effortlessly guide new hires through a seamless onboarding journey. Streamline paperwork, deliver essential training materials, and foster a warm welcome that sets the stage for success.",
+        img: "/Section.png",
+        color: "#039855",
+    },
+    {
+        title: "Team Management",
+        header: "Unified Team Oversight",
+        body: "Loubby centralizes team and company management, providing a unified platform for effortless oversight. From tracking project progress to managing roles and responsibilities, empower your leadership with real-time insights for informed decision-making.",
+        img: "/Frame-428.png",
+        color: "#1A73E8",
+    },
+    {
+        title: "Payroll and Expense Management",
+        header: "Precision in Payroll and Expense Management",
+        body: "Simplify financial management with Loubby’s integrated solution for payroll and expense tracking. Seamlessly handle payroll processing, track expenses, and maintain financial records—all within a single, user-friendly platform",
+        img: "/Section-1.png",
+        color: "#039855",
+    },
+
+    {
+        title: "Presence Management",
+        header: "Efficient Presence Management",
+        body: "Stay connected with your team and manage their presence with ease using Loubby’s Presence Management feature. Track attendance, monitor remote work hours, and ensure optimal workforce productivity. With real-time insights into employee availability and activity, you can effectively manage schedules, streamline communication, and foster a collaborative work environment.",
+        img: "/Profile-card-2.png",
+        color: "#DC6905",
+    },
+];
+
+export const array3 = [
+    { text: "Onboarding", color: "#039855", svg: <AiFillQuestionCircle /> },
+    {
+        text: "Team Management",
+        color: "#1A73E8",
+        svg: <BsFillCreditCard2FrontFill />,
+    },
+    { text: "Payroll & Expenses", color: "#039855", svg: <GrRobot /> },
+    {
+        text: "Presence Managament",
+        color: "#DC6905",
+        svg: <MdOutlineDesktopMac />,
+    },
+];
+
+export const SlideShowItems4 = [
+    {
+        title: "Schedule/Calendar",
+        header: `Efficient Schedule and Calendar Management`,
+        body: "With an integrated calendar system, you can easily schedule interviews, meetings, and other important events, eliminating scheduling conflicts and improving overall productivity.",
+        img: "/Section.png",
+        color: "#1A73E8",
+    },
+    {
+        title: "Team Management",
+        header: "Unified Team Oversight",
+        body: "Loubby centralizes team and company management, providing a unified platform for effortless oversight. From tracking project progress to managing roles and responsibilities, empower your leadership with real-time insights for informed decision-making.",
+        img: "/Frame-428.png",
+        color: "#039855",
+    },
+    {
+        title: "Payroll and Expense Management",
+        header: "Precision in Payroll and Expense Management",
+        body: "Simplify financial management with Loubby’s integrated solution for payroll and expense tracking. Seamlessly handle payroll processing, track expenses, and maintain financial records—all within a single, user-friendly platform",
+        img: "/Section-1.png",
+        color: "#DC6905",
+    },
+
+    {
+        title: "Presence Management",
+        header: "Efficient Presence Management",
+        body: "Stay connected with your team and manage their presence with ease using Loubby’s Presence Management feature. Track attendance, monitor remote work hours, and ensure optimal workforce productivity. With real-time insights into employee availability and activity, you can effectively manage schedules, streamline communication, and foster a collaborative work environment.",
+        img: "/Profile-card-2.png",
+        color: "#1A73E8",
+    },
+];
+
+export const array4 = [
+    {
+        text: "Schedule",
+        color: "#1A73E8",
+        svg: <AiFillQuestionCircle />,
+    },
+    {
+        text: "Hierarchy",
+        color: "#039855",
+        svg: <BsFillCreditCard2FrontFill />,
+    },
+    { text: "Analytics", color: "#DC6905", svg: <GrRobot /> },
+    {
+        text: "Pipeline",
         color: "#1A73E8",
         svg: <MdOutlineDesktopMac />,
     },
