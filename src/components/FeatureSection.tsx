@@ -3,7 +3,7 @@ import React from "react";
 
 const FeatureSection = () => {
     return (
-        <div className="container py-12  mx-auto xl:w-[75%]">
+        <div className="container drop-shadow-2xl py-12  mx-auto xl:w-[75%]">
             <div className="space-y-12">
                 <h1 className="text-center font-bold text-4xl">
                     Featured In the Media
