@@ -1,4 +1,5 @@
 import EmpowermentSection from "@/components/EmpowermentSection";
+import FeatureSection from "@/components/FeatureSection";
 import HeroSection from "@/components/HeroSection";
 import NavBar from "@/components/NavBar";
 import SlideShow1 from "@/components/SlideShow1";
@@ -18,7 +19,8 @@ const Page = () => {
             <SlideShow1 />
             <SlideShow3 />
             <SlideShow4 />
-            <EmpowermentSection/>
+            <EmpowermentSection />
+            <FeatureSection/>
         </div>
     );
 };
