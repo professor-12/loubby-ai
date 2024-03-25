@@ -14,10 +14,9 @@ const HeroSection = () => {
                     with AI
                 </h1>
                 <p className="text-center text-sm md:text-lg lg:text-xl text-black/80 font-light  tracking-wide">
-                    All-in-one solution to hire, manage and retain talents
-                    globally. Free ATS, talent marketplace, onboarding, payment
-                    & compliance, EOR and HR tools for your remote contractors
-                    and employees.
+                    ATS, talent marketplace, onboarding, payment & compliance,
+                    EOR and HR operations all-in-one for <br /> your remote
+                    contractors, freelancers and employees.
                 </p>
             </div>
             <div className="flex my-7 relative justify-center">
@@ -26,11 +25,11 @@ const HeroSection = () => {
                 </button>
             </div>
 
-            <div className="flex items-center px-6 md:px-0 justify-center">
+            <div className="flex items-center relative z-50 px-6 md:px-0 justify-center">
                 <Image
                     src={"/DashBoard.png"}
                     alt="HeroImageDashBoard"
-                    className="drop-shadow-2xl w-full rounded-xl"
+                    className="drop-shadow-2xl rounded-xl"
                     width={1100}
                     height={100}
                 />
