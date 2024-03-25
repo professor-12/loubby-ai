@@ -1,37 +1,41 @@
-export const links = {
-      products: [
-            { link: "Job Portal" },
-            { link: "Real-time Interview" },
-            {link:"Talent Directory"},
-            {link:"Talent Pool"},
-            {link:"Talent Directory"},
-            {link:"Loubby Cards"},
-            {link:"Virtual Fair"},
-            {link:"Email Campaign"},
-            {link:"Company Job Page"},
-            {link:"Score Cards"},
-            {link:"Pipeline"},
-            {link:"Collaborative Tools"},
-            {link:"Insights/Analytics"},
-            {link:"Insights/Analytics"},
-            {link:"Schedules/Calendar"},
-            {link:"AI Screening"},
+export const links = [
+      {products: [
+            { name: "Job Portal" },
+            { name: "Real-time Interview" },
+            {name:"Talent Directory"},
+            {name:"Talent Pool"},
+            {name:"Talent Directory"},
+            {name:"Loubby Cards"},
+            {name:"Virtual Fair"},
+            {name:"Email Campaign"},
+            {name:"Company Job Page"},
+            {name:"Score Cards"},
+            {name:"Pipeline"},
+            {name:"Collaborative Tools"},
+            {name:"Insights/Analytics"},
+            {name:"Insights/Analytics"},
+            {name:"Schedules/Calendar"},
+            {name:"AI Screening"},
             
-      ],
-      Company: [
-          {link:"Pricing"},  
-          {link:"FAQ"},  
-          {link:"Contact Us"},  
-      ],
-      Resources: [
-            {link:"Blog"},
-            {link:"Knowledge-base"},
-      ],
-      Legal: [
-            {link:"Terms of Service"},
-            { link: "Privacy Policy" },
-            { link: "Cookies Policy" },
-            { link: "Data Processing" },
+      ]},
+      {
+            Company: [
+                  { name: "Pricing" },
+                  { name: "FAQ" },
+                  { name: "Contact Us" },
+            ]
+      },
+     { Resources: [
+            {name:"Blog"},
+            {name:"Knowledge-base"},
+      ]},
+      {
+            Legal: [
+                  { name: "Terms of Service" },
+                  { name: "Privacy Policy" },
+                  { name: "Cookies Policy" },
+                  { name: "Data Processing" },
 
-      ]
-}
+            ]
+      }
+]
