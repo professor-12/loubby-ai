@@ -33,7 +33,7 @@ const SlideShowNavigation: React.FC<SlideShowNavigationType<any>> = ({
                                 className="flex space-x-3 items-center"
                             >
                                 <span className="text-xl">{text?.svg}</span>
-                                <span>{text.text}</span>
+                                <span className="hidden md:flex">{text.text}</span>
                             </p>
                         </button>
                     );
