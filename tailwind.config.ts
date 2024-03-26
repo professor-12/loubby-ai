@@ -23,7 +23,8 @@ const config: Config = {
       }  ,
       backgroundImage: {
         heroBg: "url('/LoubbyHeroBgSection.webp')",
-        "subtract-1": "url('/Subtract-1.png')"
+        "subtract-1": "url('/Subtract-1.png')",
+        gradientBg: "url('/Frame-445-1.png')"
       }
     },
   },

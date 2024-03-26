@@ -7,8 +7,38 @@ html {
 }
 
 @layer {
-    p  ,li  {
-        @apply text-muted
+    p,
+    li {
+        @apply text-muted;
     }
 }
+.animategradient {
+    background: linear-gradient(
+        -45deg,
+        rgb(21, 112, 239),
+        rgb(3, 152, 85),
+        rgb(220, 104, 3),
+        rgb(68, 76, 231)
+    );
+    background-size: 400% 400%;
+    animation: AnimateGradient 22s ease infinite 8s;
+}
 
+    @keyframes AnimateGradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 25% 75%
+        }
+        50% {
+            background-position: 50% 100%;
+        }
+        75% {
+           background-position: 25% 75%
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }

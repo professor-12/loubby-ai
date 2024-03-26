@@ -1,44 +1,40 @@
-"use client";
-import useSlideShow from "@/hooks/useSlideShowHooks";
-import React from "react";
-import { SlideShow } from "./UI/SlideShowHeader.tsx/SlideShow";
-import SlideShowHeader from "./UI/SlideShowHeader.tsx/SlideShowHeader";
-import SlideShowParagraph from "./UI/SlideShowHeader.tsx/SlideShowParagraph";
-import SlideShowNavigation from "./UI/SlideShowHeader.tsx/SlideShowNavigation";
-import {
-    SlideShowItems2,
-    array2,
-} from "@/lib/slideShow1";
-import { SlideShowImage } from "./UI/SlideShowHeader.tsx/SlideShowImages";
-import Image from "next/image";
-import Link from "next/link";
+"use client"
+import React from 'react'
+import { SlideShowImage } from './UI/SlideShowHeader.tsx/SlideShowImages';
+import {  SlideShowItems4 , array4 } from '@/lib/slideShow1';
+import SlideShowNavigation from './UI/SlideShowHeader.tsx/SlideShowNavigation';
+import Image from 'next/image';
+import SlideShowHeader from './UI/SlideShowHeader.tsx/SlideShowHeader';
+import SlideShowParagraph from './UI/SlideShowHeader.tsx/SlideShowParagraph';
+import Link from 'next/link';
+import useSlideShow from '@/hooks/useSlideShowHooks';
+import { SlideShow } from './UI/SlideShowHeader.tsx/SlideShow';
 
-const SlideShow1 = () => {
+const SlideShow4 = () => {
     const { index, setIndex } = useSlideShow!(0, 3, 3000);
-    const context = SlideShowItems2[index];
+    const context = SlideShowItems4[index];
     return (
         <SlideShow>
             <div>
                 <SlideShowHeader>
-                    Assess your <br /> candidates with ease
+                    Stay organized with powerful <br /> management tools
                 </SlideShowHeader>
                 <SlideShowParagraph>
-                    Loubby’s assessment portal and scorecard features make it
-                    easy to evaluate and select the right candidates for your
-                    job openings.
+                    Find, hire and manage employees without hassle with Loubby’s
+                    all-in-one software solution
                 </SlideShowParagraph>
             </div>
             <div>
                 <SlideShowNavigation
                     index={index}
                     setIndex={setIndex}
-                    array={array2}
+                    array={array4}
                 />
             </div>
-            <div className="my-16">
+            <div className="mt-16">
                 <SlideShowImage context={context} />
             </div>
-            <div className="mx-auto overflow-hidden px-15 my-40 relative rounded-xl p-20 w-[75%] bg-[#EEF4FF]">
+            <div className="mx-auto overflow-hidden px-15 my-20 mt-40 relative rounded-xl p-20 w-[75%] bg-[#EEF4FF]">
                 <div className="space-y-4 ">
                     <div className="flex space-x-3 items-center">
                         <span className="flex items-center justify-center rounded-full bg-[#444CE7] font-extrabold text-3xl text-white w-12 h-12">
@@ -75,4 +71,4 @@ const SlideShow1 = () => {
     );
 };
 
-export default SlideShow1;
+export default SlideShow4
