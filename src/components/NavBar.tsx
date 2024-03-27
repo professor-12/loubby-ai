@@ -13,7 +13,7 @@ import { IoMenu } from "react-icons/io5";
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(!true);
     return (
-        <header className="bg-white z-[10000]  left-0 right-0 shadow-inner  fixed w-full top-0  h-[5.25rem] flex items-center">
+        <header className="bg-white z-[10000]  left-0 right-0 shadow-inner  fixed  top-0  h-[5.25rem] flex items-center">
             <div className="container px-2 lg:px-0 bg-white items-center mx-auto xl:w-[75%] flex justify-between">
                 <div className="flex w-full md:w-auto justify-between md:justify-start  bg-white gap-8 items-center">
                     <Link href={"/"}>
@@ -52,14 +52,14 @@ const NavBar = () => {
                         className="fixed lg:hidden hidden md:block transition-all duration-500 top-0 bottom-0 min-w-[40%] z-[100000] bg-white"
                         style={{ left: isOpen ? 0 : -1000 }}
                     >
-                        <div className="flex justify-end p-3">
+                        <div className="flex justify-end p-4">
                             <IoClose
                                 className="text-3xl font-bold self-end cursor-pointer"
                                 onClick={() => setIsOpen(false)}
                             />
                         </div>
 
-                        <ul className="space-y-8 my-12 p-3">
+                        <ul className="space-y-8 my-12 p-4">
                             <li>Home</li>
 
                             <li className="flex items-center">
@@ -81,7 +81,7 @@ const NavBar = () => {
                     {/* { smaller devices} */}
                     <nav
                         className="fixed md:hidden  mx-1  transition-all duration-500 top-0 right-0 left-0 min-h-screen z-[100000] bg-white"
-                        style={{ top: isOpen ? 88 : -1000000 }}
+                        style={{ top: isOpen ? 88 : -100000 }}
                     >
                         <ul className="space-y-12 my-12 p-3">
                             <li>Home</li>

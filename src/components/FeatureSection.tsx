@@ -8,16 +8,14 @@ const FeatureSection = () => {
                 <h1 className="text-center font-bold text-2xl md:text-4xl">
                     Featured In the Media
                 </h1>
-                <div className="flex  flex-wrap space-x-5 lg:justify-between justify-center">
+                <div className="flex  overflow-hidden flex-wrap space-x-5 lg:justify-between justify-center">
                     <Image
-                        className="f"
                         src={"/Yahoo-Finance-5.png"}
                         alt=""
                         width={120}
                         height={50}
                     />
                     <Image
-                        className="f"
                         src={"/Bloomberg-1.png"}
                         alt=""
                         width={120}
@@ -31,7 +29,7 @@ const FeatureSection = () => {
                         height={50}
                     />
                     <Image
-                        className="f"
+                        className=""
                         src={"/MarketWatch-1.png"}
                         alt=""
                         width={120}

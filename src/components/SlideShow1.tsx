@@ -5,10 +5,7 @@ import { SlideShow } from "./UI/SlideShowHeader.tsx/SlideShow";
 import SlideShowHeader from "./UI/SlideShowHeader.tsx/SlideShowHeader";
 import SlideShowParagraph from "./UI/SlideShowHeader.tsx/SlideShowParagraph";
 import SlideShowNavigation from "./UI/SlideShowHeader.tsx/SlideShowNavigation";
-import {
-    SlideShowItems2,
-    array2,
-} from "@/lib/slideShow1";
+import { SlideShowItems2, array2 } from "@/lib/slideShow1";
 import { SlideShowImage } from "./UI/SlideShowHeader.tsx/SlideShowImages";
 import Image from "next/image";
 import Link from "next/link";
@@ -38,8 +35,8 @@ const SlideShow1 = () => {
             <div className="my-16">
                 <SlideShowImage context={context} />
             </div>
-            <div className="mx-auto overflow-hidden px-15 my-40 relative rounded-xl p-20 xl:w-[75%] bg-[#EEF4FF]">
-                <div className="space-y-4 ">
+            <div className="mx-auto container overflow-hidden px-8 md:px-15 my-40 relative rounded-xl p-20 xl:w-[75%] bg-[#EEF4FF]">
+                <div className="space-y-4 relative z-[10000]">
                     <div className="flex space-x-3 items-center">
                         <span className="flex items-center justify-center rounded-full bg-[#444CE7] font-extrabold text-3xl text-white w-12 h-12">
                             <span>?</span>
@@ -52,7 +49,7 @@ const SlideShow1 = () => {
                         </Link>
                     </div>
                     <div>
-                        <h1 className="text-[#444CE7] leading-[2.8rem] text-[2.4rem] font-semibold">
+                        <h1 className="text-[#444CE7] md:leading-[2.8rem] text-2xl md:text-[2.4rem] font-semibold">
                             Over 70% of good <br /> candidates
                         </h1>
 
@@ -66,7 +63,7 @@ const SlideShow1 = () => {
                 <Image
                     src={"/Subtract.png"}
                     alt=""
-                    className="absolute right-4 top-6 w-[25rem] h-[110%]"
+                    className="absolute md:right-4  w-[75%] top-6 md:w-[25rem] md:h-[110%]"
                     width={500}
                     height={500}
                 />
