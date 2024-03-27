@@ -80,8 +80,8 @@ const NavBar = () => {
                     </nav>
                     {/* { smaller devices} */}
                     <nav
-                        className="fixed md:hidden  mx-1  transition-all duration-500 top-0 right-0 left-0 min-h-[100%] z-[100000] bg-white"
-                        style={{ top: isOpen ? 88 : -1000 }}
+                        className="fixed md:hidden  mx-1  transition-all duration-500 top-0 right-0 left-0 min-h-screen z-[100000] bg-white"
+                        style={{ top: isOpen ? 88 : -1000000 }}
                     >
                         <ul className="space-y-12 my-12 p-3">
                             <li>Home</li>
