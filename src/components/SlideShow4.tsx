@@ -34,8 +34,8 @@ const SlideShow4 = () => {
             <div className="mt-16">
                 <SlideShowImage context={context} />
             </div>
-            <div className="mx-auto overflow-hidden px-8 md:px-15 my-20 mt-40 relative rounded-xl p-20 container  bg-[#EEF4FF]">
-                <div className="space-y-4 relative z-[1000]">
+            <div className="mx-auto overflow-hidden  px-8 md:px-15 my-20 mt-40 relative rounded-xl p-20 xl:w-[75%] container  bg-[#EEF4FF]">
+                <div className="space-y-4 relative z-[100]">
                     <div className="flex space-x-3  items-center">
                         <span className="flex items-center justify-center rounded-full bg-[#444CE7] font-extrabold text-3xl text-white w-12 h-12">
                             <span>?</span>

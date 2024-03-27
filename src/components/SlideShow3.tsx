@@ -36,7 +36,7 @@ const SlideShow3 = () => {
                 <SlideShowImage context={context} />
             </div>
 
-            <div className="mx-auto overflow-hidden px-8 md:px-12  container my-40 relative rounded-xl p-20  bg-[#FFFAEB]">
+            <div className="mx-auto overflow-hidden px-8 md:px-12 relative  container my-40  xl:w-[75%] rounded-xl p-20  bg-[#FFFAEB]">
                 <div className="space-y-4 relative z-[100]">
                     <div className="flex space-x-3 items-center">
                         <span className="flex items-center justify-center rounded-full bg-[#DC6803] font-extrabold text-3xl text-white w-12 h-12">
@@ -50,7 +50,7 @@ const SlideShow3 = () => {
                         </Link>
                     </div>
                     <div>
-                        <h1 className="text-[#DC6803] text-xl md:leading-[2.8rem] text-[2.4rem] font-semibold">
+                        <h1 className="text-[#DC6803] text-xl md:leading-[2.8rem] md:text-[2.4rem] font-semibold">
                             Using Loubby saves you the hurdle <br /> of jumping
                             across up to 6 different <br /> apps
                         </h1>
