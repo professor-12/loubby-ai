@@ -3,14 +3,14 @@ import React from "react";
 const Stats = () => {
     return (
         <div className="py-16 space-y-10">
-            <h1 className="text-4xl font-semibold text-center">
+            <h1 className="lg:text-4xl text-2xl font-semibold text-center">
                 Behind every successful company is a <br /> perfect hire for the
                 perfect role
             </h1>
 
-            <div className="grid w-[80%] mx-auto px-8 p-5 grid-cols-4 gap-8">
+            <div className="grid xl:w-[80%] mx-auto md:px-8 p-5 grid-cols-1 md:grid-cols-4 gap-12 md:gap-8">
                 <div className="text-center space-y-5">
-                    <h1 className="text-6xl text-SpecialBlue font-bold">
+                    <h1 className="md:text-6xl text-5xl text-SpecialBlue font-bold">
                         25k+
                     </h1>
 
@@ -25,7 +25,9 @@ const Stats = () => {
                     </div>
                 </div>
                 <div className="text-center space-y-5">
-                    <h1 className="text-6xl text-SpecialBlue font-bold">80%</h1>
+                    <h1 className="md:text-6xl text-5xl text-SpecialBlue font-bold">
+                        80%
+                    </h1>
 
                     <div className="space-y-1">
                         <h3 className="text-xl font-semibold">
@@ -38,7 +40,9 @@ const Stats = () => {
                     </div>
                 </div>
                 <div className="text-center space-y-5">
-                    <h1 className="text-6xl text-SpecialBlue font-bold">150</h1>
+                    <h1 className="md:text-6xl text-5xl text-SpecialBlue font-bold">
+                        150
+                    </h1>
 
                     <div className="space-y-1">
                         <h3 className="text-xl font-semibold">
@@ -51,7 +55,7 @@ const Stats = () => {
                     </div>
                 </div>
                 <div className="text-center space-y-5">
-                    <h1 className="text-6xl text-SpecialBlue font-bold">
+                    <h1 className="md:text-6xl text-5xl text-SpecialBlue font-bold">
                         5x
                     </h1>
                     <div className="space-y-1">

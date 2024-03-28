@@ -35,8 +35,8 @@ const SlideShow2 = () => {
             <div className="my-16">
             <SlideShowImage context={context} />
             </div>
-            <div className="mx-auto overflow-hidden px-15 my-40 relative rounded-xl p-20 w-[75%] bg-lightOpacityGreen">
-                <div className="space-y-4 ">
+            <div className="mx-auto  overflow-hidden md:px-15 my-40 relative  rounded-xl p-2 container md:p-20 xl:w-[75%] bg-lightOpacityGreen">
+                <div className="space-y-4 relative z-50">
                     <div className="flex space-x-3 items-center">
                         <span className="flex items-center justify-center rounded-full bg-primaryGreen font-extrabold text-3xl text-white w-12 h-12">
                             <span>?</span>
@@ -48,8 +48,8 @@ const SlideShow2 = () => {
                             <span>Knowlenge Base</span>
                         </Link>
                     </div>
-                    <div>
-                        <h1 className="text-primaryGreen text-[2.5rem] font-semibold">
+                    <div className="space-y-2 md:space-y-0">
+                        <h1 className="text-primaryGreen text-xl lgd:text-[2.5rem] font-semibold">
                             Types of talents on Loubby
                         </h1>
                         <div className="space-y-[0.19rem">
@@ -93,7 +93,7 @@ const SlideShow2 = () => {
                 <Image
                     src={"/subtract-1.png"}
                     alt=""
-                    className="absolute right-4 top-6 w-[25rem] h-[110%]"
+                    className="absolute right-4 -top-40 lg:top-6 md:w-[25rem] h-[110%]"
                     width={500}
                     height={500}
                 />

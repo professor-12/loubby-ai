@@ -10,14 +10,12 @@ const FeatureSection = () => {
                 </h1>
                 <div className="flex  overflow-hidden flex-wrap space-x-5 lg:justify-between justify-center">
                     <Image
-                        className="f"
                         src={"/Yahoo-Finance-5.png"}
                         alt=""
                         width={120}
                         height={50}
                     />
                     <Image
-                        className="f"
                         src={"/Bloomberg-1.png"}
                         alt=""
                         width={120}
