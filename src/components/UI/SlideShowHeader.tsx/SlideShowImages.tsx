@@ -20,14 +20,14 @@ export const SlideShowImage = ({ context }: { context: any }) => {
                 <div className="lg:w-[30rem] w-full md:w-[26rem]">
                     <div
                         style={{ borderColor: context?.color }}
-                        className="lg:h-[28rem] h-[24rem] md:h-[20rem]  md:w-full  border-8  rounded-xl"
+                        className="lg:h-[28rem] h-[20rem]  md:w-full  border-8  rounded-xl"
                     >
                         <Image
                             src={context?.img}
                             alt="slideShowImage"
                             width={700}
                             height={700 }
-                            className="rounded-2xl  xl:h-[28rem] h-[24rem] md:h-[20rem] top-16 left-10 drop-shadow-md absolute"
+                            className="rounded-2xl  xl:h-[28rem] h-[20rem] top-16 left-10 drop-shadow-md absolute"
                         />
                     </div>
                 </div>
