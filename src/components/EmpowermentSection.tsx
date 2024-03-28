@@ -3,23 +3,23 @@ import React from "react";
 
 const EmpowermentSection = () => {
     return (
-        <div className="mx-auto my-12 xl:w-[75%] container">
+        <div className="mx-auto my-12 xl:w-[75%] px-4 container">
             <div className="space-y-4">
                 <h2 className="text-lg text-center text-[#1A73EC] font-semibold">
                     For candidates
                 </h2>
-                <h1 className="text-5xl text-center font-bold">
+                <h1 className="lg:text-5xl text-2xl md:text-3xl text-center font-bold">
                     Empower Your Job Search with Loubby&apos;s <br />{" "}
                     Candidate-Centric Features
                 </h1>
-                <p className="text-center text-lg py-1">
+                <p className="text-center md:text-lg py-1">
                     Unlock a seamless and empowering job search experience with
                     Loubby’s comprehensive features tailored for candidates.
                 </p>
             </div>
             {/* {Grid section} */}
-            <div className="grid grid-cols-5 gap-7 py-5 ">
-                <div className="col-span-3 space-y-3  min-h-[12rem] rounded-xl p-8 border-[#D0D5DD]  border-8">
+            <div className="grid lg:grid-cols-5 gap-7 py-5 ">
+                <div className="lg:col-span-3 space-y-3  min-h-[12rem] rounded-xl p-8 border-[#D0D5DD]  border-8">
                     <div>
                         <Image
                             src={"/Frame-446.png"}
@@ -42,7 +42,7 @@ const EmpowermentSection = () => {
                         </p>
                     </div>
                 </div>
-                <div className="col-span-2 space-y-4 p-8 rounded-xl border-[#D0D5DD]  border-8">
+                <div className="lg:col-span-2 space-y-4 p-8 rounded-xl border-[#D0D5DD]  border-8">
                     <div className="border rounded-lg p-4">
                         <Image
                             src={"/Section-3.png"}
@@ -65,7 +65,7 @@ const EmpowermentSection = () => {
                         </p>
                     </div>
                 </div>
-                <div className="rounded-xl p-8 col-span-2  space-y-5 border-[#D0D5DD]  border-8">
+                <div className="rounded-xl p-8 lg:col-span-2  space-y-5 border-[#D0D5DD]  border-8">
                     <div className="border rounded-lg p-4">
                         <Image
                             src={"/Section-4.png"}
@@ -87,7 +87,7 @@ const EmpowermentSection = () => {
                         </p>
                     </div>
                 </div>
-                <div className="col-span-3 rounded-xl p-8 space-y-4  border-[#D0D5DD]  border-8">
+                <div className="lg:col-span-3 rounded-xl p-8 space-y-4  border-[#D0D5DD]  border-8">
                     <div className="rounded-lg p-4">
                         <Image
                             src={"/Container-5-1024x619.png"}

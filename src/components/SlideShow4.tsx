@@ -34,9 +34,9 @@ const SlideShow4 = () => {
             <div className="mt-16">
                 <SlideShowImage context={context} />
             </div>
-            <div className="mx-auto overflow-hidden px-15 my-20 mt-40 relative rounded-xl p-20 w-[75%] bg-[#EEF4FF]">
-                <div className="space-y-4 ">
-                    <div className="flex space-x-3 items-center">
+            <div className="mx-auto overflow-hidden  px-8 md:px-15 my-20 mt-40 relative rounded-xl p-20 xl:w-[75%] container  bg-[#EEF4FF]">
+                <div className="space-y-4 relative z-[100]">
+                    <div className="flex space-x-3  items-center">
                         <span className="flex items-center justify-center rounded-full bg-[#444CE7] font-extrabold text-3xl text-white w-12 h-12">
                             <span>?</span>
                         </span>
@@ -48,7 +48,7 @@ const SlideShow4 = () => {
                         </Link>
                     </div>
                     <div>
-                        <h1 className="text-[#444CE7] leading-[2.8rem] text-[2.4rem] font-semibold">
+                        <h1 className="text-[#444CE7] leading-[2.8rem] text-xl md:text-[2.4rem] font-semibold">
                             Over 70% of good <br /> candidates
                         </h1>
 
@@ -62,7 +62,7 @@ const SlideShow4 = () => {
                 <Image
                     src={"/Subtract.png"}
                     alt=""
-                    className="absolute right-4 top-6 w-[25rem] h-[110%]"
+                    className="absolute right-4 top-6 md:w-[25rem] w-[70%] md:h-[110%]"
                     width={500}
                     height={500}
                 />
