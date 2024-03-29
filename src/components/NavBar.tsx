@@ -26,21 +26,24 @@ const NavBar = () => {
                     </Link>
                     <nav className="hidden lg:flex">
                         <ul className="flex space-x-6 xl:space-x-8">
-                            <li>Home</li>
-                            <li className="flex items-center">
+                            <Link href="/">Home</Link>
+                            <Link href="/product" className="flex items-center">
                                 <span>Products</span>{" "}
                                 <span>
                                     <RxCaretDown className="text-2xl" />
                                 </span>
-                            </li>
-                            <li>Candidate</li>
-                            <li>Pricing</li>
-                            <li className="flex items-center">
+                            </Link>
+                            <Link href="/candidate">Candidate</Link>
+                            <Link href={"/pricing"}>Pricing</Link>
+                            <Link
+                                href={"/resources"}
+                                className="flex items-center"
+                            >
                                 <span>Resources</span>{" "}
                                 <span>
                                     <RxCaretDown className="text-2xl" />
                                 </span>
-                            </li>
+                            </Link>
                         </ul>
                     </nav>
                     <IoMenu
@@ -60,22 +63,25 @@ const NavBar = () => {
                         </div>
 
                         <ul className="space-y-8 my-12 p-4">
-                            <li>Home</li>
+                            <Link href={"/home"}>Home</Link>
 
-                            <li className="flex items-center">
+                            <Link href={"/"} className="flex items-center">
                                 <span>Products</span>{" "}
                                 <span>
                                     <RxCaretDown className="text-2xl" />
                                 </span>
-                            </li>
-                            <li>Candidate</li>
-                            <li>Pricing</li>
-                            <li className="flex items-center">
+                            </Link>
+                            <Link href="/candidate">Candidate</Link>
+                            <Link href={"/pricing"}>Pricing</Link>
+                            <Link
+                                href={"/resources"}
+                                className="flex items-center"
+                            >
                                 <span>Resources</span>{" "}
                                 <span>
                                     <RxCaretDown className="text-2xl" />
                                 </span>
-                            </li>
+                            </Link>
                         </ul>
                     </nav>
                     {/* { smaller devices} */}
@@ -84,21 +90,24 @@ const NavBar = () => {
                         style={{ top: isOpen ? 88 : -100000 }}
                     >
                         <ul className="space-y-12 my-12 p-3">
-                            <li>Home</li>
-                            <li className="flex items-center">
+                            <Link href={"/home"}>Home</Link>
+                            <Link
+                                href={"/products"}
+                                className="flex items-center"
+                            >
                                 <span>Products</span>{" "}
                                 <span>
                                     <RxCaretDown className="text-2xl" />
                                 </span>
-                            </li>
-                            <li>Candidate</li>
-                            <li>Pricing</li>
-                            <li className="flex items-center">
+                            </Link>
+                            <Link href={"/"}>Candidate</Link>
+                            <Link href={"/"}>Pricing</Link>
+                            <Link href={"/"} className="flex items-center">
                                 <span>Resources</span>{" "}
                                 <span>
                                     <RxCaretDown className="text-2xl" />
                                 </span>
-                            </li>
+                            </Link>
                         </ul>
 
                         <div className="space-y-4">
