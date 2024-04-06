@@ -4,7 +4,7 @@ import Button from "@/utils/Button";
 import Image from "next/image";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { RxCaretDown } from "react-icons/rx";
 import BackDrop from "./UI/BackDrop";
 import { FaUser } from "react-icons/fa6";
@@ -13,12 +13,13 @@ import { GrRobot } from "react-icons/gr";
 import { FiPlayCircle } from "react-icons/fi";
 import { IoMenu } from "react-icons/io5";
 import { employee_management, productLinks } from "@/lib/productslinkslist";
+import { NavLinks } from "@/lib/NavLinks";
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(!true);
     const [visible, setVisible] = useState<"a" | "b" | "c">("a");
     return (
-        <header className="bg-white z-[10000]  left-0 right-0 shadow-inner  fixed  top-0  h-[5.25rem] flex items-center">
+        <header className="bg-white z-[10000] mb-42 left-0 right-0 shadow-inner  fixed  top-0  h-[5.25rem] flex items-center">
             <div className="container px-2 lg:px-0 bg-white items-center mx-auto xl:w-[75%] flex justify-between">
                 <div className="flex w-full md:w-auto justify-between md:justify-start  bg-white gap-8 items-center">
                     <Link href={"/"}>
@@ -31,409 +32,467 @@ const NavBar = () => {
                     </Link>
                     <nav className="hidden lg:flex">
                         <ul className="flex  space-x-6 xl:space-x-8">
-                            <Link href="/">Home</Link>
-                            <div className="inset-0  group items-center">
-                                <Link href={"/product"} className="flex">
-                                    <span>Products</span>
-                                    <span>
-                                        <RxCaretDown className="text-2xl" />
-                                    </span>
-                                </Link>{" "}
-                                <div className="absolute transition-all duration-1000 group-hover:block left-0  w-full drop-shadow-xl min-h-[20rem] pt-[2rem]  hidden">
-                                    <div className="bg-white w-full h-full">
-                                        <div className="mx-auto transition-all duration-1000 flex py-12 container xl:w-[75%]">
-                                            <ul className="space-y-3 min-w-[16rem]">
-                                                <li
-                                                    onMouseEnter={() =>
-                                                        setVisible("a")
-                                                    }
-                                                    className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue  cursor-pointer  font-medium gap-4 items-center ${
-                                                        visible == "a" &&
-                                                        "bg-lightOpacityBlue"
-                                                    }`}
-                                                >
-                                                    <FaUser />
-                                                    <p>Talent Recuiting</p>
-                                                </li>
-                                                <li
-                                                    onMouseEnter={() =>
-                                                        setVisible("b")
-                                                    }
-                                                    className={`flex p-3 px-5 transition-colors duration-300 rounded-xl hover:bg-lightOpacityBlue cursor-pointer  font-medium gap-4 items-center ${
-                                                        visible == "b" &&
-                                                        "bg-lightOpacityBlue"
-                                                    }`}
-                                                >
-                                                    <LiaBoxesSolid />
-                                                    <p>Employee Management</p>
-                                                </li>
-                                                <li
-                                                    onMouseEnter={() =>
-                                                        setVisible("c")
-                                                    }
-                                                    className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue cursor-pointer   font-medium gap-4 items-center ${
-                                                        visible == "c" &&
-                                                        "bg-lightOpacityBlue"
-                                                    }`}
-                                                >
-                                                    <GrRobot />
-                                                    <p>Jabari AI Assistant</p>
-                                                </li>
-                                            </ul>
-                                            <div>
-                                                <div className="w-[1rem] h-[100%] border-r mr-5" />
-                                            </div>
-                                            <div
-                                                className={`${
-                                                    visible !== "a" && "hidden"
-                                                }`}
-                                            >
-                                                <div className="grid grid-cols-3 gap-4">
-                                                    <ul className="space-y-5">
-                                                        <li className="font-semibold">
-                                                            HIRING
-                                                        </li>
-                                                        {productLinks[0].map(
-                                                            (
-                                                                items,
-                                                                counter
-                                                            ) => (
-                                                                <li
-                                                                    key={
-                                                                        items.title
-                                                                    }
-                                                                    className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                        counter ==
-                                                                        0
-                                                                            ? "hover:bg-red-100/30"
-                                                                            : "hover:bg-blue-100/30"
-                                                                    }`}
-                                                                >
-                                                                    <span
-                                                                        style={{
-                                                                            color: items.color,
-                                                                        }}
-                                                                    >
-                                                                        {
-                                                                            items.svg
-                                                                        }
-                                                                    </span>
-                                                                    <div className="flex text-sm flex-col">
-                                                                        <span className="font-semibold">
-                                                                            {
-                                                                                items.title
-                                                                            }
-                                                                        </span>
-                                                                        <span>
-                                                                            {
-                                                                                items.body
-                                                                            }
-                                                                        </span>
-                                                                    </div>
-                                                                </li>
-                                                            )
-                                                        )}
-                                                    </ul>
-                                                    <ul className="space-y-5">
-                                                        <li className="font-semibold">
-                                                            ASSESMENT
-                                                        </li>
-                                                        {productLinks[1].map(
-                                                            (
-                                                                items,
-                                                                counter
-                                                            ) => (
-                                                                <li
-                                                                    key={
-                                                                        items.title
-                                                                    }
-                                                                    className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                        counter ==
-                                                                        1
-                                                                            ? "hover:bg-red-100/30"
-                                                                            : "hover:bg-blue-100/30"
-                                                                    }`}
-                                                                >
-                                                                    <span
-                                                                        style={{
-                                                                            color: items.color,
-                                                                        }}
-                                                                    >
-                                                                        {
-                                                                            items.svg
-                                                                        }
-                                                                    </span>
-                                                                    <div className="flex text-sm flex-col">
-                                                                        <span className="font-semibold">
-                                                                            {
-                                                                                items.title
-                                                                            }
-                                                                        </span>
-                                                                        <span>
-                                                                            {
-                                                                                items.body
-                                                                            }
-                                                                        </span>
-                                                                    </div>
-                                                                </li>
-                                                            )
-                                                        )}
-                                                    </ul>
-                                                    <ul className="sapce-y-5">
-                                                        <li className="font-semibold">
-                                                            MANAGEMENT
-                                                        </li>
-                                                        {productLinks[2].map(
-                                                            (
-                                                                items,
-                                                                counter
-                                                            ) => (
-                                                                <li
-                                                                    key={
-                                                                        items.title
-                                                                    }
-                                                                    className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                        counter ==
-                                                                        2
-                                                                            ? "hover:bg-red-100/30"
-                                                                            : "hover:bg-blue-100/30"
-                                                                    }`}
-                                                                >
-                                                                    <span
-                                                                        style={{
-                                                                            color: items.color,
-                                                                        }}
-                                                                    >
-                                                                        {
-                                                                            items.svg
-                                                                        }
-                                                                    </span>
-                                                                    <div className="flex text-sm flex-col">
-                                                                        <span className="font-semibold">
-                                                                            {
-                                                                                items.title
-                                                                            }
-                                                                        </span>
-                                                                        <span>
-                                                                            {
-                                                                                items.body
-                                                                            }
-                                                                        </span>
-                                                                    </div>
-                                                                </li>
-                                                            )
-                                                        )}
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div
-                                                className={`${
-                                                    visible !== "b" && "hidden"
-                                                }`}
-                                            >
-                                                <div className="grid grid-cols-3 gap-4">
-                                                    <ul className="space-y-5">
-                                                        {employee_management[0].map(
-                                                            (
-                                                                items,
-                                                                counter
-                                                            ) => (
-                                                                <li
-                                                                    key={
-                                                                        items.title
-                                                                    }
-                                                                    className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                        counter ==
-                                                                        0
-                                                                            ? "hover:bg-red-100/30"
-                                                                            : "hover:bg-blue-100/30"
-                                                                    }`}
-                                                                >
-                                                                    <span
-                                                                        style={{
-                                                                            color: items.color,
-                                                                        }}
-                                                                    >
-                                                                        {
-                                                                            items.svg
-                                                                        }
-                                                                    </span>
-                                                                    <div className="flex text-sm flex-col">
-                                                                        <span className="font-semibold">
-                                                                            {
-                                                                                items.title
-                                                                            }
-                                                                        </span>
-                                                                        <span>
-                                                                            {
-                                                                                items.body
-                                                                            }
-                                                                        </span>
-                                                                    </div>
-                                                                </li>
-                                                            )
-                                                        )}
-                                                    </ul>
-                                                    <ul className="space-y-5">
-                                                        {employee_management[1].map(
-                                                            (
-                                                                items,
-                                                                counter
-                                                            ) => (
-                                                                <li
-                                                                    key={
-                                                                        items.title
-                                                                    }
-                                                                    className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                        counter ==
-                                                                        1
-                                                                            ? "hover:bg-red-100/30"
-                                                                            : "hover:bg-blue-100/30"
-                                                                    }`}
-                                                                >
-                                                                    <span
-                                                                        style={{
-                                                                            color: items.color,
-                                                                        }}
-                                                                    >
-                                                                        {
-                                                                            items.svg
-                                                                        }
-                                                                    </span>
-                                                                    <div className="flex text-sm flex-col">
-                                                                        <span className="font-semibold">
-                                                                            {
-                                                                                items.title
-                                                                            }
-                                                                        </span>
-                                                                        <span>
-                                                                            {
-                                                                                items.body
-                                                                            }
-                                                                        </span>
-                                                                    </div>
-                                                                </li>
-                                                            )
-                                                        )}
-                                                    </ul>
-                                                    <div className="relative">
-                                                        <Link href={"/"}>
-                                                            <div className="bg-red-100/60 relative overflow-hidden rounded-xl p-4 flex items-center justify-center">
-                                                                <Image
-                                                                    src={
-                                                                        "/Container-4.png"
-                                                                    }
-                                                                    width={400}
-                                                                    height={400}
-                                                                    alt="image"
-                                                                />
-                                                            </div>
-                                                            <FiPlayCircle className="text-[8rem] left-[5rem] absolute top-[4rem] mx-auto text-orange-400" />
-                                                        </Link>
-                                                        <h1 className="text-xl py-8 font-semibold">
-                                                            See Employee
-                                                            Management in Action
-                                                        </h1>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div
-                                                className={`${
-                                                    visible !== "c" && "hidden"
-                                                }`}
-                                            >
-                                                <div className="flex  space-x-4">
-                                                    <div className="bg-blue-200/30 border rounded-xl p-5 space-y-2">
-                                                        <Image
-                                                            src={
-                                                                "/Loubby-Webapp-Header.png"
-                                                            }
-                                                            className="w-12 rounded h-12"
-                                                            alt=""
-                                                            width={100}
-                                                            height={100}
-                                                        />
-                                                        <h1 className="font-semibold">
-                                                            Custom AI
-                                                            Integration in one
-                                                            Click.
-                                                        </h1>
-                                                        <p className="text-lg">
-                                                            Integrate Jabari
-                                                            into your software
-                                                            in seconds. No
-                                                            Stress or Hassle
-                                                        </p>
-                                                        <div className="grid  py-4 gap-4 grid-cols-2">
-                                                            <p>
-                                                                Smart Task
-                                                                Automation
-                                                            </p>
-                                                            <p>
-                                                                Seamless
-                                                                Integration
-                                                            </p>
-                                                            <p>
-                                                                Adaptable
-                                                                Learning
-                                                            </p>
-                                                            <p>
-                                                                24/7
-                                                                Availability
-                                                            </p>
-                                                            <p>
-                                                                Enhanced
-                                                                Security
-                                                            </p>
-                                                            <p>
-                                                                Natural Language
-                                                                Processing
-                                                            </p>
+                            {NavLinks.map(({ link, name }, index) => {
+                                if (index == 1) {
+                                    return (
+                                        <div
+                                            key={name}
+                                            className="inset-0  group items-center"
+                                        >
+                                            <Link href={link} className="flex">
+                                                <span>{name}</span>
+                                                <span>
+                                                    <RxCaretDown className="text-2xl" />
+                                                </span>
+                                            </Link>{" "}
+                                            <div className="absolute transition-all duration-1000 group-hover:block left-0  w-full drop-shadow-xl min-h-[20rem] pt-[2rem]  hidden">
+                                                <div className="bg-white w-full h-full">
+                                                    <div className="mx-auto transition-all duration-1000 flex py-12 container xl:w-[75%]">
+                                                        <ul className="space-y-3 min-w-[16rem]">
+                                                            <li
+                                                                onMouseEnter={() =>
+                                                                    setVisible(
+                                                                        "a"
+                                                                    )
+                                                                }
+                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue  cursor-pointer  font-medium gap-4 items-center ${
+                                                                    visible ==
+                                                                        "a" &&
+                                                                    "bg-lightOpacityBlue"
+                                                                }`}
+                                                            >
+                                                                <FaUser />
+                                                                <p>
+                                                                    Talent
+                                                                    Recuiting
+                                                                </p>
+                                                            </li>
+                                                            <li
+                                                                onMouseEnter={() =>
+                                                                    setVisible(
+                                                                        "b"
+                                                                    )
+                                                                }
+                                                                className={`flex p-3 px-5 transition-colors duration-300 rounded-xl hover:bg-lightOpacityBlue cursor-pointer  font-medium gap-4 items-center ${
+                                                                    visible ==
+                                                                        "b" &&
+                                                                    "bg-lightOpacityBlue"
+                                                                }`}
+                                                            >
+                                                                <LiaBoxesSolid />
+                                                                <p>
+                                                                    Employee
+                                                                    Management
+                                                                </p>
+                                                            </li>
+                                                            <li
+                                                                onMouseEnter={() =>
+                                                                    setVisible(
+                                                                        "c"
+                                                                    )
+                                                                }
+                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue cursor-pointer   font-medium gap-4 items-center ${
+                                                                    visible ==
+                                                                        "c" &&
+                                                                    "bg-lightOpacityBlue"
+                                                                }`}
+                                                            >
+                                                                <GrRobot />
+                                                                <p>
+                                                                    Jabari AI
+                                                                    Assistant
+                                                                </p>
+                                                            </li>
+                                                        </ul>
+                                                        <div>
+                                                            <div className="w-[1rem] h-[100%] border-r mr-5" />
                                                         </div>
-                                                    </div>
-                                                    <div>
-                                                        <div className="relative">
-                                                            <Link href={"/"}>
-                                                                <div className="bg-blue-100/60 relative overflow-hidden rounded-xl p-4 flex items-center justify-center">
+                                                        <div
+                                                            className={`${
+                                                                visible !==
+                                                                    "a" &&
+                                                                "hidden"
+                                                            }`}
+                                                        >
+                                                            <div className="grid grid-cols-3 gap-4">
+                                                                <ul className="space-y-5">
+                                                                    <li className="font-semibold">
+                                                                        HIRING
+                                                                    </li>
+                                                                    {productLinks[0].map(
+                                                                        (
+                                                                            items,
+                                                                            counter
+                                                                        ) => (
+                                                                            <li
+                                                                                key={
+                                                                                    items.title
+                                                                                }
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
+                                                                                    counter ==
+                                                                                    0
+                                                                                        ? "hover:bg-red-100/30"
+                                                                                        : "hover:bg-blue-100/30"
+                                                                                }`}
+                                                                            >
+                                                                                <span
+                                                                                    style={{
+                                                                                        color: items.color,
+                                                                                    }}
+                                                                                >
+                                                                                    {
+                                                                                        items.svg
+                                                                                    }
+                                                                                </span>
+                                                                                <div className="flex text-sm flex-col">
+                                                                                    <span className="font-semibold">
+                                                                                        {
+                                                                                            items.title
+                                                                                        }
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        {
+                                                                                            items.body
+                                                                                        }
+                                                                                    </span>
+                                                                                </div>
+                                                                            </li>
+                                                                        )
+                                                                    )}
+                                                                </ul>
+                                                                <ul className="space-y-5">
+                                                                    <li className="font-semibold">
+                                                                        ASSESMENT
+                                                                    </li>
+                                                                    {productLinks[1].map(
+                                                                        (
+                                                                            items,
+                                                                            counter
+                                                                        ) => (
+                                                                            <li
+                                                                                key={
+                                                                                    items.title
+                                                                                }
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
+                                                                                    counter ==
+                                                                                    1
+                                                                                        ? "hover:bg-red-100/30"
+                                                                                        : "hover:bg-blue-100/30"
+                                                                                }`}
+                                                                            >
+                                                                                <span
+                                                                                    style={{
+                                                                                        color: items.color,
+                                                                                    }}
+                                                                                >
+                                                                                    {
+                                                                                        items.svg
+                                                                                    }
+                                                                                </span>
+                                                                                <div className="flex text-sm flex-col">
+                                                                                    <span className="font-semibold">
+                                                                                        {
+                                                                                            items.title
+                                                                                        }
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        {
+                                                                                            items.body
+                                                                                        }
+                                                                                    </span>
+                                                                                </div>
+                                                                            </li>
+                                                                        )
+                                                                    )}
+                                                                </ul>
+                                                                <ul className="sapce-y-5">
+                                                                    <li className="font-semibold">
+                                                                        MANAGEMENT
+                                                                    </li>
+                                                                    {productLinks[2].map(
+                                                                        (
+                                                                            items,
+                                                                            counter
+                                                                        ) => (
+                                                                            <li
+                                                                                key={
+                                                                                    items.title
+                                                                                }
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
+                                                                                    counter ==
+                                                                                    2
+                                                                                        ? "hover:bg-red-100/30"
+                                                                                        : "hover:bg-blue-100/30"
+                                                                                }`}
+                                                                            >
+                                                                                <span
+                                                                                    style={{
+                                                                                        color: items.color,
+                                                                                    }}
+                                                                                >
+                                                                                    {
+                                                                                        items.svg
+                                                                                    }
+                                                                                </span>
+                                                                                <div className="flex text-sm flex-col">
+                                                                                    <span className="font-semibold">
+                                                                                        {
+                                                                                            items.title
+                                                                                        }
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        {
+                                                                                            items.body
+                                                                                        }
+                                                                                    </span>
+                                                                                </div>
+                                                                            </li>
+                                                                        )
+                                                                    )}
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            className={`${
+                                                                visible !==
+                                                                    "b" &&
+                                                                "hidden"
+                                                            }`}
+                                                        >
+                                                            <div className="grid grid-cols-3 gap-4">
+                                                                <ul className="space-y-5">
+                                                                    {employee_management[0].map(
+                                                                        (
+                                                                            items,
+                                                                            counter
+                                                                        ) => (
+                                                                            <li
+                                                                                key={
+                                                                                    items.title
+                                                                                }
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
+                                                                                    counter ==
+                                                                                    0
+                                                                                        ? "hover:bg-red-100/30"
+                                                                                        : "hover:bg-blue-100/30"
+                                                                                }`}
+                                                                            >
+                                                                                <span
+                                                                                    style={{
+                                                                                        color: items.color,
+                                                                                    }}
+                                                                                >
+                                                                                    {
+                                                                                        items.svg
+                                                                                    }
+                                                                                </span>
+                                                                                <div className="flex text-sm flex-col">
+                                                                                    <span className="font-semibold">
+                                                                                        {
+                                                                                            items.title
+                                                                                        }
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        {
+                                                                                            items.body
+                                                                                        }
+                                                                                    </span>
+                                                                                </div>
+                                                                            </li>
+                                                                        )
+                                                                    )}
+                                                                </ul>
+                                                                <ul className="space-y-5">
+                                                                    {employee_management[1].map(
+                                                                        (
+                                                                            items,
+                                                                            counter
+                                                                        ) => (
+                                                                            <li
+                                                                                key={
+                                                                                    items.title
+                                                                                }
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
+                                                                                    counter ==
+                                                                                    1
+                                                                                        ? "hover:bg-red-100/30"
+                                                                                        : "hover:bg-blue-100/30"
+                                                                                }`}
+                                                                            >
+                                                                                <span
+                                                                                    style={{
+                                                                                        color: items.color,
+                                                                                    }}
+                                                                                >
+                                                                                    {
+                                                                                        items.svg
+                                                                                    }
+                                                                                </span>
+                                                                                <div className="flex text-sm flex-col">
+                                                                                    <span className="font-semibold">
+                                                                                        {
+                                                                                            items.title
+                                                                                        }
+                                                                                    </span>
+                                                                                    <span>
+                                                                                        {
+                                                                                            items.body
+                                                                                        }
+                                                                                    </span>
+                                                                                </div>
+                                                                            </li>
+                                                                        )
+                                                                    )}
+                                                                </ul>
+                                                                <div className="relative">
+                                                                    <Link
+                                                                        href={
+                                                                            "/"
+                                                                        }
+                                                                    >
+                                                                        <div className="bg-red-100/60 relative overflow-hidden rounded-xl p-4 flex items-center justify-center">
+                                                                            <Image
+                                                                                src={
+                                                                                    "/Container-4.png"
+                                                                                }
+                                                                                width={
+                                                                                    400
+                                                                                }
+                                                                                height={
+                                                                                    400
+                                                                                }
+                                                                                alt="image"
+                                                                            />
+                                                                        </div>
+                                                                        <FiPlayCircle className="text-[8rem] left-[5rem] absolute top-[4rem] mx-auto text-orange-400" />
+                                                                    </Link>
+                                                                    <h1 className="text-xl py-8 font-semibold">
+                                                                        See
+                                                                        Employee
+                                                                        Management
+                                                                        in
+                                                                        Action
+                                                                    </h1>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            className={`${
+                                                                visible !==
+                                                                    "c" &&
+                                                                "hidden"
+                                                            }`}
+                                                        >
+                                                            <div className="flex  space-x-4">
+                                                                <div className="bg-blue-200/30 border rounded-xl p-5 space-y-2">
                                                                     <Image
                                                                         src={
-                                                                            "/Container-4.png"
+                                                                            "/Loubby-Webapp-Header.png"
                                                                         }
+                                                                        className="w-12 rounded h-12"
+                                                                        alt=""
                                                                         width={
-                                                                            400
+                                                                            100
                                                                         }
                                                                         height={
-                                                                            400
+                                                                            100
                                                                         }
-                                                                        alt="image"
                                                                     />
+                                                                    <h1 className="font-semibold">
+                                                                        Custom
+                                                                        AI
+                                                                        Integration
+                                                                        in one
+                                                                        Click.
+                                                                    </h1>
+                                                                    <p className="text-lg">
+                                                                        Integrate
+                                                                        Jabari
+                                                                        into
+                                                                        your
+                                                                        software
+                                                                        in
+                                                                        seconds.
+                                                                        No
+                                                                        Stress
+                                                                        or
+                                                                        Hassle
+                                                                    </p>
+                                                                    <div className="grid  py-4 gap-4 grid-cols-2">
+                                                                        <p>
+                                                                            Smart
+                                                                            Task
+                                                                            Automation
+                                                                        </p>
+                                                                        <p>
+                                                                            Seamless
+                                                                            Integration
+                                                                        </p>
+                                                                        <p>
+                                                                            Adaptable
+                                                                            Learning
+                                                                        </p>
+                                                                        <p>
+                                                                            24/7
+                                                                            Availability
+                                                                        </p>
+                                                                        <p>
+                                                                            Enhanced
+                                                                            Security
+                                                                        </p>
+                                                                        <p>
+                                                                            Natural
+                                                                            Language
+                                                                            Processing
+                                                                        </p>
+                                                                    </div>
                                                                 </div>
-                                                                <FiPlayCircle className="text-[8rem] left-[5rem] absolute top-[4rem] mx-auto text-orange-400" />
-                                                            </Link>
-                                                            <h1 className="text-xl py-8 font-semibold">
-                                                                See Employee
-                                                                Management in
-                                                                Action
-                                                            </h1>
+                                                                <div>
+                                                                    <div className="relative">
+                                                                        <Link
+                                                                            href={
+                                                                                "/"
+                                                                            }
+                                                                        >
+                                                                            <div className="bg-blue-100/60 relative overflow-hidden rounded-xl p-4 flex items-center justify-center">
+                                                                                <Image
+                                                                                    src={
+                                                                                        "/Container-4.png"
+                                                                                    }
+                                                                                    width={
+                                                                                        400
+                                                                                    }
+                                                                                    height={
+                                                                                        400
+                                                                                    }
+                                                                                    alt="image"
+                                                                                />
+                                                                            </div>
+                                                                            <FiPlayCircle className="text-[8rem] left-[5rem] absolute top-[4rem] mx-auto text-orange-400" />
+                                                                        </Link>
+                                                                        <h1 className="text-xl py-8 font-semibold">
+                                                                            See
+                                                                            Employee
+                                                                            Management
+                                                                            in
+                                                                            Action
+                                                                        </h1>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <Link href="/candidate">Candidate</Link>
-                            <Link href={"/pricing"}>Pricing</Link>
-                            <Link
-                                href={"/resources"}
-                                className="flex items-center"
-                            >
-                                <span>Resources</span>{" "}
-                                <span>
-                                    <RxCaretDown className="text-2xl" />
-                                </span>
-                            </Link>
+                                    );
+                                } else if (index == 3) <div>sdv</div>;
+                                return (
+                                    <Link key={name} href={link}>
+                                        {name}
+                                    </Link>
+                                );
+                            })}
                         </ul>
                     </nav>
                     <IoMenu
