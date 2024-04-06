@@ -51,19 +51,19 @@ const HeroCandidateSection = () => {
     }, [Switch, activeTextLength, index, listofWords.length]);
 
     return (
-        <div className="mx-auto w-[65%]">
+        <div className="px-2">
             <div className="text-center space-y-5">
                 <h1 className="text-center  font-semibold  text-SpecialBlue">
                     For Candidates
                 </h1>
-                <h1 className="text-center text-slate-800 text-5xl font-bold">
+                <h1 className="text-center text-slate-800 text-3xl md:text-5xl font-bold">
                     Elevate Your{" "}
                     <span className="text-SpecialBlue   after:animate-pulse after:content-[' ']  after:h-[2.5rem] self-center after:m-1 after:border-2 after:border-slate-500">
                         {nextWord?.substring(0, index)}
                     </span>{" "}
                     with Loubby
                 </h1>
-                <p className="text-lg">
+                <p className="md:text-lg">
                     Keep your organization informed and stay organized with
                     Loubby’s robust workforce management tools.
                 </p>

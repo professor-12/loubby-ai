@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const SlideShow1 = () => {
     return (
-        <div className="flex justify-between space-x-12 my-12 items-center">
+        <div className="flex px-2 flex-col lg:flex-row justify-between space-x-12 my-12 items-center">
             <div className="md:flex md:space-y-5 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto mr-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
@@ -15,20 +15,20 @@ const SlideShow1 = () => {
                                 alt="slideShowImage"
                                 width={700}
                                 height={700}
-                                className="rounded-2xl  xl:h-[28rem] h-[20rem] top-16 left-10 drop-shadow-md absolute"
+                                className="rounded-2xl  xl:h-[28rem] h-[19rem] top-16 left-10 drop-shadow-md absolute"
                             />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-5 my-16">
                 <h1 className="text-SpecialBlue text-lg font-semibold">
                     Job Discovery
                 </h1>
-                <p className="text-4xl font-semibold">
+                <p className="md:text-4xl text-3xl font-semibold">
                     Discover Exciting Opportunities with Ease
                 </p>
-                <p className="text-lg">
+                <p className="md:text-lg">
                     With a user-friendly interface and advanced search
                     capabilities, candidates can easily navigate through job
                     listings, filter based on preferences, and discover relevant

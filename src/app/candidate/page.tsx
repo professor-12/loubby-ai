@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 };
 const page = () => {
     return (
-        <div className="my-32 p-3 container mx-auto xl:w-[75%]">
+        <div className="my-32 container mx-auto xl:w-[75%]">
             <HeroCandidateSection />
             <Cards />
             <SlideShow1 />
             <SlideShow2 />
             <SlideShow3 />
-            <SlideShow4/>
+            <SlideShow4 />
         </div>
     );
 };

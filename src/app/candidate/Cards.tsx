@@ -6,7 +6,7 @@ import { IoIosRocket } from "react-icons/io";
 
 const Cards = () => {
     return (
-        <div className="md:px-12 md:p-12 grid  md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="md:px-12 px-4 md:p-12 grid  md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div
                 onMouseMove={(event) => {
                     console.log(event.clientX, event.clientY);
