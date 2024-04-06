@@ -5,7 +5,7 @@ import { PiCheckBold } from "react-icons/pi";
 
 const SlideShow3 = () => {
     return (
-        <div className="flex justify-between space-x-12 my-12 items-center">
+        <div className="flex flex-col md:flex-row justify-between px-4 md:space-x-12 my-12 items-center">
             <div className="md:flex md:space-y-5 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto mr-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
@@ -21,14 +21,14 @@ const SlideShow3 = () => {
                     </div>
                 </div>
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4  mt-28 md:mt-0">
                 <h1 className="text-orange-600 text-lg font-semibold">
                     Application Tracking
                 </h1>
-                <p className="text-4xl font-semibold">
+                <p className="text-3xl md:text-4xl font-semibold">
                     Stay Informed Throughout the Application Process
                 </p>
-                <p className="text-lg">
+                <p className="md:text-lg">
                     With Loubby’s application tracking feature, candidates can
                     effortlessly track the progress of their job applications in
                     real-time. Stay informed about the status of your

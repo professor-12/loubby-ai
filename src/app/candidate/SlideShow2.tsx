@@ -5,7 +5,7 @@ import { SlideShowList2 } from "./lib/slideShowList";
 
 const SlideShow2 = () => {
     return (
-        <div className="flex  flex-row-reverse justify-between space-x-12 my-36 items-center">
+        <div className="flex px-4 flex-col lg:flex-row-reverse justify-between md:space-x-12 mt-36  items-center">
             <div className="md:flex md:space-y-5 pr-10 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto ml-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
@@ -21,14 +21,14 @@ const SlideShow2 = () => {
                     </div>
                 </div>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 mt-20 md:my-0">
                 <h1 className="text-green-700 text-lg font-semibold">
                     Candidate Profile Management
                 </h1>
-                <p className="text-4xl font-semibold">
+                <p className="text-3xl md:text-4xl font-semibold">
                     Showcase Your Skills and Stand Out to Employers
                 </p>
-                <p className="text-lg">
+                <p className="md:text-lg">
                     Loubby’s candidate profile management feature enables
                     individuals to create a professional and comprehensive
                     profile that showcases their skills, experience, and
