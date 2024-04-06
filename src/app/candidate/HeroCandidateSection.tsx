@@ -20,7 +20,7 @@ const HeroCandidateSection = () => {
             if (Switch == "forwards") {
                 setNextWordIndex((prev) => {
                     if (prev >= listofWords.length) return 0;
-                    return prev
+                    return prev;
                 });
                 if (index >= activeTextLength) {
                     return setSwitch("backwards");
@@ -72,7 +72,7 @@ const HeroCandidateSection = () => {
                 Join Loubby
             </button>
 
-            <div className="flex items-center my-12 relative z-50 px-6 md:px-0 justify-center">
+            <div className="flex items-center  my-12 relative z-50 px-6 md:px-0 justify-center">
                 <Image
                     src={"/DashBoard.png"}
                     alt="HeroImageDashBoard"
