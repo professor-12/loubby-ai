@@ -6,12 +6,7 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-@layer {
-    p,
-    li {
-        @apply text-muted;
-    }
-}
+
 .animategradient {
     background: linear-gradient(
         -45deg,
@@ -40,5 +35,5 @@ html {
         }
         100% {
             background-position: 0% 50%;
-       }
+        }
     }
