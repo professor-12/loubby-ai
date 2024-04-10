@@ -12,6 +12,7 @@ import {
     feature6,
     feature7,
 } from "./lib/FeatureData";
+import { FaCheck } from "react-icons/fa6";
 
 const FeatureSection = () => {
     return (
@@ -68,9 +69,27 @@ const FeatureSection = () => {
                                             {item.name}
                                         </h2>
                                         <div className="space-x-52 flex">
-                                            <p>{item.basic ? "-" : "?"}</p>
-                                            <p>{item.growth ? "-" : "?"}</p>
-                                            <p>{item.enterprise ? "-" : "?"}</p>
+                                            <p>
+                                                {item.basic ? (
+                                                    <FaCheck className="text-blue-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.growth ? (
+                                                    <FaCheck className="text-green-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.enterprise ? (
+                                                    <FaCheck className="text-orange-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
                                         </div>
                                     </div>
                                 );
@@ -92,9 +111,27 @@ const FeatureSection = () => {
                                             {item.name}
                                         </h2>
                                         <div className="space-x-52 flex">
-                                            <p>{item.basic ? "-" : "?"}</p>
-                                            <p>{item.growth ? "-" : "?"}</p>
-                                            <p>{item.enterprise ? "-" : "?"}</p>
+                                            <p>
+                                                {item.basic ? (
+                                                    <FaCheck className="text-blue-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.growth ? (
+                                                    <FaCheck className="text-green-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.enterprise ? (
+                                                    <FaCheck className="text-orange-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
                                         </div>
                                     </div>
                                 );
@@ -118,9 +155,27 @@ const FeatureSection = () => {
                                             {item.name}
                                         </h2>
                                         <div className="space-x-52 flex">
-                                            <p>{item.basic ? "-" : "?"}</p>
-                                            <p>{item.growth ? "-" : "?"}</p>
-                                            <p>{item.enterprise ? "-" : "?"}</p>
+                                            <p>
+                                                {item.basic ? (
+                                                    <FaCheck className="text-blue-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.growth ? (
+                                                    <FaCheck className="text-green-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.enterprise ? (
+                                                    <FaCheck className="text-orange-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
                                         </div>
                                     </div>
                                 );
@@ -142,9 +197,27 @@ const FeatureSection = () => {
                                             {item.name}
                                         </h2>
                                         <div className="space-x-52 flex">
-                                            <p>{item.basic ? "-" : "?"}</p>
-                                            <p>{item.growth ? "-" : "?"}</p>
-                                            <p>{item.enterprise ? "-" : "?"}</p>
+                                            <p>
+                                                {item.basic ? (
+                                                    <FaCheck className="text-blue-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.growth ? (
+                                                    <FaCheck className="text-green-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.enterprise ? (
+                                                    <FaCheck className="text-orange-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
                                         </div>
                                     </div>
                                 );
@@ -168,9 +241,27 @@ const FeatureSection = () => {
                                             {item.name}
                                         </h2>
                                         <div className="space-x-52 flex">
-                                            <p>{item.basic ? "-" : "?"}</p>
-                                            <p>{item.growth ? "-" : "?"}</p>
-                                            <p>{item.enterprise ? "-" : "?"}</p>
+                                            <p>
+                                                {item.basic ? (
+                                                    <FaCheck className="text-blue-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.growth ? (
+                                                    <FaCheck className="text-green-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.enterprise ? (
+                                                    <FaCheck className="text-orange-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
                                         </div>
                                     </div>
                                 );
@@ -191,10 +282,28 @@ const FeatureSection = () => {
                                         <h2 className="text-sm font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="lg:space-x-52 flex">
-                                            <p>{item.basic ? "-" : "?"}</p>
-                                            <p>{item.growth ? "-" : "?"}</p>
-                                            <p>{item.enterprise ? "-" : "?"}</p>
+                                        <div className="space-x-52 flex">
+                                            <p>
+                                                {item.basic ? (
+                                                    <FaCheck className="text-blue-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.growth ? (
+                                                    <FaCheck className="text-green-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.enterprise ? (
+                                                    <FaCheck className="text-orange-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
                                         </div>
                                     </div>
                                 );
@@ -218,9 +327,27 @@ const FeatureSection = () => {
                                             {item.name}
                                         </h2>
                                         <div className="space-x-52 flex">
-                                            <p>{item.basic ? "-" : "?"}</p>
-                                            <p>{item.growth ? "-" : "?"}</p>
-                                            <p>{item.enterprise ? "-" : "?"}</p>
+                                            <p>
+                                                {item.basic ? (
+                                                    <FaCheck className="text-blue-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.growth ? (
+                                                    <FaCheck className="text-green-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
+                                            <p>
+                                                {item.enterprise ? (
+                                                    <FaCheck className="text-orange-600 text-lg" />
+                                                ) : (
+                                                    "?"
+                                                )}
+                                            </p>
                                         </div>
                                     </div>
                                 );
