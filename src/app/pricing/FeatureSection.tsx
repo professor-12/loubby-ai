@@ -24,21 +24,21 @@ const FeatureSection = () => {
                     Compare Plans And Features
                 </h1>
             </div>
-            <div className="flex pr-10 sticky top-[4.6rem] justify-end mt-12">
-                <div className="flex items-center space-x-20">
+            <div className="flex pr-10 bg-white sticky top-[4.6rem] justify-end mt-12">
+                <div className="flex  items-center space-x-20">
                     <div>
                         <h1 className="text-center font-semibold text-lg py-1">
                             Basic
                         </h1>
-                        <button className="p-2 px-4 bg-[#444CE7] text-white font-semibold rounded-lg">
+                        <button className="p-2 hidden md:flex px-4 bg-[#444CE7] text-white font-semibold rounded-lg">
                             Select Plan
                         </button>
                     </div>
-                    <div>
+                    <div className="">
                         <h1 className="text-center font-semibold text-lg py-1">
                             Growth
                         </h1>
-                        <button className="p-2 px-4 bg-[#039855] text-white font-semibold rounded-lg">
+                        <button className="p-2 hidden md:flex px-4 bg-[#039855] text-white font-semibold rounded-lg">
                             Select Plan
                         </button>
                     </div>
@@ -46,14 +46,14 @@ const FeatureSection = () => {
                         <h1 className="text-center font-semibold text-lg py-1">
                             Enterprise
                         </h1>
-                        <button className="p-2 px-4 bg-[#DC6803] text-white font-semibold rounded-lg">
+                        <button className="p-2 px-4 hidden md:flex bg-[#DC6803] text-white font-semibold rounded-lg">
                             Select Plan
                         </button>
                     </div>
                 </div>
             </div>
 
-            <Accordion className="w-[90%] my-12">
+            <Accordion className="container lg:w-[90%] my-12">
                 <AccordionItem>
                     <AccordionTrigger>Hirring Tools</AccordionTrigger>
                     <AccordionContent>
@@ -191,7 +191,7 @@ const FeatureSection = () => {
                                         <h2 className="text-sm font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="space-x-52 flex">
+                                        <div className="lg:space-x-52 flex">
                                             <p>{item.basic ? "-" : "?"}</p>
                                             <p>{item.growth ? "-" : "?"}</p>
                                             <p>{item.enterprise ? "-" : "?"}</p>

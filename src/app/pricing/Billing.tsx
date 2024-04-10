@@ -43,7 +43,7 @@ const Billing = () => {
                     <div className="font-semibold text-lg">Monthly</div>
                 </div>
             </div>
-            <div className="grid mx-auto container md:w-[85%] gap-6 grid-cols-3 py-5">
+            <div className="grid mx-auto px-4 md:px-0 container md:w-[85%] gap-6 lg:grid-cols-3 grid-cols-1 py-5">
                 <div className="rounded-2xl space-y-6 border py-12 px-4 hover:shadow shadow-black backdrop:shadow-2xl transition-colors duration-500">
                     <div className="text-center space-y-2">
                         <h1 className="text-lg font-semibold">Free Forever</h1>
@@ -142,7 +142,7 @@ const Billing = () => {
                     </button>
                 </div>
 
-                <div className="rounded-2xl text-gray-800  flex justify-between  border p-8  px-7 col-span-3">
+                <div className="rounded-2xl text-gray-800  flex flex-col space-y-5 md:space-y-0 md:flex-row justify-between  border p-8  px-7 lg:col-span-3">
                     <div className="flex-col flex justify-between">
                         <h1 className="font-semibold text-lg">
                             Talent Management
@@ -158,7 +158,7 @@ const Billing = () => {
                             management
                         </p>
                     </div>
-                    <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+                    <div className="grid md:grid-cols-2 gap-x-8 gap-y-2">
                         {arrayThird.map((e) => {
                             return (
                                 <div
