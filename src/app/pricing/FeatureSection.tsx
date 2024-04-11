@@ -57,7 +57,7 @@ const FeatureSection = () => {
             <Accordion className="container lg:w-[90%] my-12">
                 <AccordionItem>
                     <AccordionTrigger>Hirring Tools</AccordionTrigger>
-                    <AccordionContent>
+                    <AccordionContent>k
                         <div className="py-2 space-y-3">
                             {feature1.map((item) => {
                                 return (

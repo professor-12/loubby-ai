@@ -7,8 +7,10 @@ import { IoClose } from "react-icons/io5";
 import React, { useState } from "react";
 import { RxCaretDown } from "react-icons/rx";
 import BackDrop from "./UI/BackDrop";
+import { IoBookSharp } from "react-icons/io5";
 import { FaUser } from "react-icons/fa6";
 import { LiaBoxesSolid } from "react-icons/lia";
+import { FaPenFancy } from "react-icons/fa";
 import { GrRobot } from "react-icons/gr";
 import { FiPlayCircle } from "react-icons/fi";
 import { IoMenu } from "react-icons/io5";
@@ -486,12 +488,53 @@ const NavBar = () => {
                                             </div>
                                         </div>
                                     );
-                                } else if (index == 3) <div>sdv</div>;
-                                return (
-                                    <Link key={name} href={link}>
-                                        {name}
-                                    </Link>
-                                );
+                                } else if (index == 4) {
+                                    return (
+                                        <div
+                                            key={name}
+                                            className="inset-0  relative group items-center"
+                                        >
+                                            <Link className="flex" href={link}>
+                                                <span>{name}</span>
+                                                <span>
+                                                    <RxCaretDown className="text-2xl" />
+                                                </span>
+                                            </Link>
+                                            <div className="min-w-[18rem] space-y-4 shadow-md bg-white rounded-lg hidden absolute  group-hover:flex flex-col p-6 px-4">
+                                                <div className="flex space-x-3 p-3 duration-700 transition-all cursor-pointer rounded hover:bg-[#FFFAEB]">
+                                                    <FaPenFancy className="text-[#DC6905] text-2xl" />
+                                                    <div className="">
+                                                        <h1 className="font-semibold">
+                                                            Blog
+                                                        </h1>
+                                                        <p className="text-sm">
+                                                            Articles and posts
+                                                            relevant for you
+                                                            from us
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div className="flex space-x-3 p-3 duration-700 items-start transition-all cursor-pointer rounded hover:bg-[#ECFDF3]">
+                                                    <IoBookSharp className="text-[#039855] text-lg" />
+                                                    <div className="">
+                                                        <h1 className="font-semibold">
+                                                            Knowledge-Based
+                                                        </h1>
+                                                        <p className="text-sm">
+                                                            How-To
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    );
+                                } else {
+                                    return (
+                                        <Link key={name} href={link}>
+                                            {name}
+                                        </Link>
+                                    );
+                                }
                             })}
                         </ul>
                     </nav>

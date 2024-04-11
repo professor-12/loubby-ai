@@ -45,7 +45,7 @@ const Footer = () => {
                             talents
                         </p>
                     </div>
-                    <div className="flex flex-wrap  text-center md:text-start space-y-8 md:space-y-0 md:items-start lg:flex-row justify-between flex-1">
+                    <div className="flex flex-col justify-center space-y-4  text-center md:text-start md:space-y-0 md:items-start lg:flex-row md:justify-between md:flex-row  flex-1">
                         <div>
                             <div className="font-semibold py-1">Product</div>
                             <ul className="space-y-3">
