@@ -13,7 +13,7 @@ const Footer = () => {
     return (
         <>
             <div className="container  lg:w-[75%] px-4 md:px-0  md:mx-auto">
-                <div className="animategradient  bg-no-repeat my-12 md:my-32 flex flex-col md:flex-row space-y-3 md:space-y-0 relative overflow-hidden  items-start md:items-center  justify-between rounded-3xl  md:p-12 p-5 md:py-24">
+                <div className="animategradient  bg-no-repeat md:my-32 flex flex-col md:flex-row space-y-3 md:space-y-0 relative overflow-hidden  items-start md:items-center  justify-between rounded-3xl  md:p-12 p-5 md:py-24">
                     <div className="bg-opacity-15  inset-0 bg-no-repeat -top-40  absolute bg-gradientBg" />
                     <div className="relative space-y-3">
                         <h1 className="md:text-5xl text-2xl font-semibold leading-[1.4] text-white">

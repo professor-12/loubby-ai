@@ -591,6 +591,7 @@ const NavBar = () => {
                     </nav>
                     {/* { smaller devices} */}
                     <motion.nav
+                        initial={{ height: 0 }}
                         animate={{ height: !isOpen ? "100dvh" : 0 }}
                         className="fixed md:hidden overflow-auto top-20 bg-white  mx-1  transition-all duration-500 right-0 left-0 z-10 "
                     >

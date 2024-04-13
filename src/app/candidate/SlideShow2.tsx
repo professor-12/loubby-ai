@@ -7,9 +7,9 @@ const SlideShow2 = () => {
     return (
         <div className="flex px-4 flex-col lg:flex-row-reverse justify-between md:space-x-12 mt-36  items-center">
             <div className="md:flex md:space-y-5 pr-10 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
-                <div className="relative h-auto ml-8">
+                <div className="relative h-auto lg:ml-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
-                        <div className="lg:h-[28rem] h-[20rem] border-green-600 mr-12  md:w-full  border-8  rounded-xl">
+                        <div className="lg:h-[28rem] h-[20rem] border-green-600 mr-12 w-full  border-8  rounded-xl">
                             <Image
                                 src={"/Profile-card-2.png"}
                                 alt="slideShowImage"
@@ -25,7 +25,7 @@ const SlideShow2 = () => {
                 <h1 className="text-green-700 text-lg font-semibold">
                     Candidate Profile Management
                 </h1>
-                <p className="text-3xl md:text-4xl font-semibold">
+                <p className="text-2xl md:text-4xl font-semibold">
                     Showcase Your Skills and Stand Out to Employers
                 </p>
                 <p className="md:text-lg">
@@ -36,7 +36,7 @@ const SlideShow2 = () => {
                     key qualifications, and upload relevant documents such as
                     resumes and portfolios.
                 </p>
-                <div className="grid gap-3 grid-cols-2 p-2">
+                <div className="grid md:gap-3 gap-2 md:grid-cols-2 p-2">
                     {SlideShowList2.map((item) => (
                         <div
                             key={item}
