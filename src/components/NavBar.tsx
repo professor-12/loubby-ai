@@ -19,7 +19,7 @@ import { NavLinks } from "@/lib/NavLinks";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 const NavBar = () => {
-    const [isOpen, setIsOpen] = useState(!true);
+    const [isOpen, setIsOpen] = useState(false);
     const navigate = useRouter();
     const active = usePathname();
     const [visible, setVisible] = useState<"a" | "b" | "c">("a");
@@ -29,6 +29,7 @@ const NavBar = () => {
                 <div className="flex w-full md:w-auto justify-between md:justify-start  bg-white gap-8 items-center">
                     <Link href={"/"}>
                         <Image
+                            className="w-[80%] md:w-[100%]"
                             src={"/Logo.svg"}
                             alt="Logo"
                             width={120}
@@ -590,10 +591,10 @@ const NavBar = () => {
                     </nav>
                     {/* { smaller devices} */}
                     <motion.nav
-                        animate={{ height: !isOpen ? "100vh" : 0 }}
-                        className="fixed md:hidden overflow-hidden top-20  mx-1  transition-all duration-500 right-0 left-0 z-[100000] bg-white"
+                        animate={{ height: !isOpen ? "100dvh" : 0 }}
+                        className="fixed md:hidden overflow-auto top-20 bg-white  mx-1  transition-all duration-500 right-0 left-0 z-10 "
                     >
-                        <ul className="space-y-12  my-12 p-3">
+                        <ul className="space-y-5  p-3 bg-white">
                             {NavLinks.map((items, index) => {
                                 if (index == 1) {
                                     return (
