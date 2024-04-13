@@ -1,6 +1,5 @@
 "use client";
 import Button from "@/utils/Button";
-
 import Image from "next/image";
 import Link from "next/link";
 import { IoClose } from "react-icons/io5";
@@ -18,6 +17,7 @@ import { employee_management, productLinks } from "@/lib/productslinkslist";
 import { NavLinks } from "@/lib/NavLinks";
 import { motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
+
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigate = useRouter();
@@ -131,7 +131,10 @@ const NavBar = () => {
                                                                             items,
                                                                             counter
                                                                         ) => (
-                                                                            <li
+                                                                            <Link
+                                                                                href={
+                                                                                    items.link
+                                                                                }
                                                                                 key={
                                                                                     items.title
                                                                                 }
@@ -163,7 +166,7 @@ const NavBar = () => {
                                                                                         }
                                                                                     </span>
                                                                                 </div>
-                                                                            </li>
+                                                                            </Link>
                                                                         )
                                                                     )}
                                                                 </ul>

@@ -12,7 +12,7 @@ const slideShow = [
 ];
 const SlideShow1 = () => {
     return (
-        <div className="flex px-4 flex-col lg:flex-row justify-between md:space-x-12 mt-12 items-center">
+        <div id="job-portal" className="flex px-4 flex-col lg:flex-row justify-between md:space-x-12 mt-12 items-center">
             <div className="md:flex md:space-y-5 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto mr-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
@@ -28,7 +28,7 @@ const SlideShow1 = () => {
                     </div>
                 </div>
             </div>
-            <div className="space-y-5 mt-16 md:mt-0">
+            <div  className="space-y-5 mt-16 md:mt-0">
                 <h1 className="text-primaryOrange text-lg font-semibold">
                     Job Portal{" "}
                 </h1>

@@ -12,7 +12,10 @@ const slideShow = [
 ];
 const SlideShow4 = () => {
     return (
-        <div className="flex  px-4 md:px-0 flex-col md:flex-row-reverse justify-between md:space-x-12  md:my-36 items-center">
+        <div
+            id="talent-pool"
+            className="flex  px-4 md:px-0 flex-col md:flex-row-reverse justify-between md:space-x-12  md:my-36 items-center"
+        >
             <div className="md:flex md:space-y-5 pr-10 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto lg:ml-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">

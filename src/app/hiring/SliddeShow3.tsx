@@ -12,7 +12,7 @@ const slideShow = [
 ];
 const SlideShow3 = () => {
     return (
-        <div className="flex flex-col md:flex-row justify-between px-4 md:space-x-12 my-12 md:my-20 items-center">
+        <div id="messaging" className="flex flex-col md:flex-row justify-between px-4 md:space-x-12 my-12 md:my-20 items-center">
             <div className="md:flex md:space-y-5 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto mr-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
