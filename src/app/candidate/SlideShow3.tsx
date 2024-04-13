@@ -9,7 +9,7 @@ const SlideShow3 = () => {
             <div className="md:flex md:space-y-5 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto mr-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
-                        <div className="lg:h-[28rem] h-[20rem] border-orange-600 mr-12  md:w-full  border-8  rounded-xl">
+                        <div className="lg:h-[28rem] h-[20rem] border-orange-600 mr-12  w-full  border-8  rounded-xl">
                             <Image
                                 src={"/Main-wrap.png"}
                                 alt="slideShowImage"
@@ -25,7 +25,7 @@ const SlideShow3 = () => {
                 <h1 className="text-orange-600 text-lg font-semibold">
                     Application Tracking
                 </h1>
-                <p className="text-3xl md:text-4xl font-semibold">
+                <p className="text-2xl md:text-4xl font-semibold">
                     Stay Informed Throughout the Application Process
                 </p>
                 <p className="md:text-lg">
@@ -35,7 +35,7 @@ const SlideShow3 = () => {
                     applications, receive notifications for interview requests,
                     and track each stage of the hiring process.
                 </p>
-                <div className="grid gap-3 grid-cols-2">
+                <div className="grid md:gap-3 gap-2 md:grid-cols-2">
                     {SlideShowList1.map((item) => (
                         <div
                             key={item}

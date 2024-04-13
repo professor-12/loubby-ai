@@ -19,7 +19,7 @@ const Cards = () => {
                         <FaLightbulb className="text-3xl text-white" />
                     </span>
                 </div>
-                <h1 className="text-2xl font-semibold">Enhanced Visibility</h1>
+                <h1 className="md:text-2xl text-xl font-semibold">Enhanced Visibility</h1>
                 <p>
                     Stand out to employers by creating a professional candidate
                     profile, showcasing your skills, experience, and
@@ -32,7 +32,7 @@ const Cards = () => {
                         <HiOutlineBars2 className="text-3xl text-white" />
                     </span>
                 </div>
-                <h1 className="text-2xl text-slate-800 font-semibold">
+                <h1 className="md:text-2xl text-xl text-slate-800 font-semibold">
                     Streamlined Process
                 </h1>
                 <p className="text-slate-800">
@@ -47,7 +47,7 @@ const Cards = () => {
                         <IoIosRocket className="text-3xl text-white" />
                     </span>
                 </div>
-                <h1 className="text-2xl font-semibold text-slate-800">
+                <h1 className="md:text-2xl text-xl font-semibold text-slate-800">
                     High Success Rate
                 </h1>
                 <p>

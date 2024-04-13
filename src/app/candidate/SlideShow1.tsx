@@ -9,7 +9,7 @@ const SlideShow1 = () => {
             <div className="md:flex md:space-y-5 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto mr-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
-                        <div className="lg:h-[28rem] h-[20rem] border-blue-600 mr-12  md:w-full  border-8  rounded-xl">
+                        <div className="lg:h-[28rem] w-full h-[20rem] border-blue-600 mr-12    border-8  rounded-xl">
                             <Image
                                 src={"/Main-wrap.png"}
                                 alt="slideShowImage"
@@ -25,7 +25,7 @@ const SlideShow1 = () => {
                 <h1 className="text-SpecialBlue text-lg font-semibold">
                     Job Discovery
                 </h1>
-                <p className="md:text-4xl text-3xl font-semibold">
+                <p className="md:text-4xl text-2xl font-semibold">
                     Discover Exciting Opportunities with Ease
                 </p>
                 <p className="md:text-lg">
@@ -34,7 +34,7 @@ const SlideShow1 = () => {
                     listings, filter based on preferences, and discover relevant
                     positions tailored to their skills and aspirations.
                 </p>
-                <div className="grid gap-3 grid-cols-2">
+                <div className="grid md:gap-3 gap-2 md:grid-cols-2">
                     {SlideShowList1.map((item) => (
                         <div
                             key={item}
