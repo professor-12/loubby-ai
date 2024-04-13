@@ -29,6 +29,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+
             <div className="container mx-auto px-4 md:px-0 xl:w-[75%]">
                 <div className="flex  flex-col md:flex-row  gap-12 md:gap-40 py-12 mb-12 ">
                     <div className="md:space-y-8">

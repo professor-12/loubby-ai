@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroPricing = () => {
     return (
-        <div className="px-2 py-8">
+        <div className="px-2">
             <div className="text-center space-y-5">
                 <h1 className="text-center  font-semibold  text-SpecialBlue">
                     Pricing

@@ -7,7 +7,11 @@ import SlideShow3 from "@/components/SlideShow3";
 import SlideShow4 from "@/components/SlideShow4";
 import Stats from "@/components/Stats";
 import React from "react";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+    title: "Home - Loubbby",
+};
 const Page = () => {
     return (
         <div>
@@ -18,7 +22,7 @@ const Page = () => {
             <SlideShow3 />
             <SlideShow4 />
             <EmpowermentSection />
-            <FeatureSection/>
+            <FeatureSection />
         </div>
     );
 };

@@ -3,7 +3,7 @@ import Card, { CardBody, CardHeader } from "./Card";
 
 const FAQ = () => {
     return (
-        <div className="my-16 bg-[rgb(249,250,251)] py-16">
+        <div className="my-16 px-4 bg-[rgb(249,250,251)] py-16">
             <div className="container space-y-8 lg:w-[70%] mx-auto">
                 <div className="text-center space-y-3">
                     <h1 className="text-blue-600 font-semibold">

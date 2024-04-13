@@ -36,6 +36,7 @@ const NavBar = () => {
                             height={100}
                         />
                     </Link>
+                    {/* Large Screen */}
                     <nav className="hidden lg:flex">
                         <ul className="flex  space-x-6 xl:space-x-8">
                             {NavLinks.map(({ link, name }, index) => {
@@ -542,6 +543,8 @@ const NavBar = () => {
                             })}
                         </ul>
                     </nav>
+                    {/* endlarge screen */}
+
                     <IoMenu
                         className="lg:hidden cursor-pointer text-3xl"
                         onClick={() => setIsOpen((prev) => !prev)}
@@ -595,7 +598,7 @@ const NavBar = () => {
                         animate={{ height: !isOpen ? "100dvh" : 0 }}
                         className="fixed md:hidden overflow-auto top-20 bg-white  mx-1  transition-all duration-500 right-0 left-0 z-10 "
                     >
-                        <ul className="space-y-5  p-3 bg-white">
+                        <ul className="space-y-7  p-3 bg-white">
                             {NavLinks.map((items, index) => {
                                 if (index == 1) {
                                     return (
@@ -606,7 +609,7 @@ const NavBar = () => {
                                                     <RxCaretDown className="text-2xl" />
                                                 </span>
                                             </li>
-                                            <ul className="px-6 space-y-4 text-lg p-2">
+                                            <ul className="px-6 space-y-5 text-lg p-3 hidden">
                                                 <li className="cursor-pointer">
                                                     Assess
                                                 </li>
@@ -655,7 +658,7 @@ const NavBar = () => {
                             })}
                         </ul>
 
-                        <div className="space-y-4 px-4">
+                        <div className="space-y-4 px-4 my-6">
                             <button className="bg-[#EAF3FF] text-[#1A73E8]  text-center w-full p-3 rounded-xl">
                                 Login
                             </button>
