@@ -23,8 +23,8 @@ const Billing = () => {
     const [checker, setCheker] = useState(false);
     return (
         <div className="py-12">
-            <div className="flex justify-center">
-                <div className="flex space-x-14 items-center">
+            <div className="flex px-4 justify-center">
+                <div className="flex md:pace-x-14 justify-between w-full items-center">
                     <div className="flex flex-col ">
                         <span className="font-semibold text-lg">Yearly</span>
                         <span className="text-green-700 tracking-tight font-semibold">
