@@ -43,7 +43,7 @@ const Billing = () => {
                     <div className="font-semibold text-lg">Monthly</div>
                 </div>
             </div>
-            <div className="grid mx-auto px-4 md:px-0 container md:w-[85%] gap-6 lg:grid-cols-3 grid-cols-1 py-5">
+            <div className="grid mx-auto px-8 md:px-0 container md:w-[85%] gap-6 lg:grid-cols-3 grid-cols-1 py-5">
                 <div className="rounded-2xl space-y-6 border py-12 px-4 hover:shadow shadow-black backdrop:shadow-2xl transition-colors duration-500">
                     <div className="text-center space-y-2">
                         <h1 className="text-lg font-semibold">Free Forever</h1>

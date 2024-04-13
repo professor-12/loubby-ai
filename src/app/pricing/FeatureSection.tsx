@@ -16,19 +16,19 @@ import { FaCheck } from "react-icons/fa6";
 
 const FeatureSection = () => {
     return (
-        <section className="relative">
+        <section className="relative px-4 md:px-0">
             <div>
                 <h1 className="text-SpecialBlue font-semibold text-lg text-center">
                     Compare
                 </h1>
-                <h1 className="text-4xl font-bold text-center">
+                <h1 className="md:text-4xl text-2xl font-bold text-center">
                     Compare Plans And Features
                 </h1>
             </div>
-            <div className="flex pr-10 bg-white sticky top-[4.6rem] justify-end mt-12">
-                <div className="flex  items-center space-x-20">
+            <div className="flex pr-10 bg-white sticky top-[4.6rem] justify-end mt-6 md:mt-12">
+                <div className="flex  items-center md:space-x-20 space-x-3">
                     <div>
-                        <h1 className="text-center font-semibold text-lg py-1">
+                        <h1 className="text-center font-semibold md:text-lg py-1">
                             Basic
                         </h1>
                         <button className="p-2 hidden md:flex px-4 bg-[#444CE7] text-white font-semibold rounded-lg">
@@ -36,7 +36,7 @@ const FeatureSection = () => {
                         </button>
                     </div>
                     <div className="">
-                        <h1 className="text-center font-semibold text-lg py-1">
+                        <h1 className="text-center font-semibold md:text-lg py-1">
                             Growth
                         </h1>
                         <button className="p-2 hidden md:flex px-4 bg-[#039855] text-white font-semibold rounded-lg">
@@ -44,7 +44,7 @@ const FeatureSection = () => {
                         </button>
                     </div>
                     <div>
-                        <h1 className="text-center font-semibold text-lg py-1">
+                        <h1 className="text-center font-semibold md:text-lg py-1">
                             Enterprise
                         </h1>
                         <button className="p-2 px-4 hidden md:flex bg-[#DC6803] text-white font-semibold rounded-lg">
@@ -57,18 +57,18 @@ const FeatureSection = () => {
             <Accordion className="container lg:w-[90%] my-12">
                 <AccordionItem>
                     <AccordionTrigger>Hirring Tools</AccordionTrigger>
-                    <AccordionContent>k
+                    <AccordionContent>
                         <div className="py-2 space-y-3">
                             {feature1.map((item) => {
                                 return (
                                     <div
                                         key={item.name}
-                                        className="flex p-2 border-b h-[4rem] items-center justify-between"
+                                        className="flex md:p-2 border-b h-[4rem] items-center justify-between"
                                     >
                                         <h2 className="text-sm font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="space-x-52 flex">
+                                        <div className="md:space-x-52 gap-x-14 flex">
                                             <p>
                                                 {item.basic ? (
                                                     <FaCheck className="text-blue-600 text-lg" />
@@ -105,12 +105,12 @@ const FeatureSection = () => {
                                 return (
                                     <div
                                         key={item.name}
-                                        className="flex p-2 border-b h-[4rem] items-center justify-between"
+                                        className="flex md:p-2 border-b h-[4rem] items-center justify-between"
                                     >
                                         <h2 className="text-sm font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="space-x-52 flex">
+                                        <div className="gap-x-12 md:space-x-52 flex">
                                             <p>
                                                 {item.basic ? (
                                                     <FaCheck className="text-blue-600 text-lg" />
@@ -149,12 +149,12 @@ const FeatureSection = () => {
                                 return (
                                     <div
                                         key={item.name}
-                                        className="flex p-2 border-b h-[4rem] items-center justify-between"
+                                        className="flex md:p-2 border-b h-[4rem] items-center justify-between"
                                     >
                                         <h2 className="text-sm font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="space-x-52 flex">
+                                        <div className="gap-x-12 md:space-x-52 flex">
                                             <p>
                                                 {item.basic ? (
                                                     <FaCheck className="text-blue-600 text-lg" />
@@ -191,12 +191,12 @@ const FeatureSection = () => {
                                 return (
                                     <div
                                         key={item.name}
-                                        className="flex p-2 border-b h-[4rem] items-center justify-between"
+                                        className="flex md:p-2 border-b h-[4rem] items-center justify-between"
                                     >
                                         <h2 className="text-sm font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="space-x-52 flex">
+                                        <div className="gap-x-12 md:space-x-52 flex">
                                             <p>
                                                 {item.basic ? (
                                                     <FaCheck className="text-blue-600 text-lg" />
@@ -235,12 +235,12 @@ const FeatureSection = () => {
                                 return (
                                     <div
                                         key={item.name}
-                                        className="flex p-2 border-b h-[4rem] items-center justify-between"
+                                        className="flex md:p-2 border-b h-[4rem] items-center justify-between"
                                     >
                                         <h2 className="text-sm font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="space-x-52 flex">
+                                        <div className=" gap-x-12 md:space-x-52 flex">
                                             <p>
                                                 {item.basic ? (
                                                     <FaCheck className="text-blue-600 text-lg" />
@@ -277,12 +277,12 @@ const FeatureSection = () => {
                                 return (
                                     <div
                                         key={item.name}
-                                        className="flex p-2 border-b h-[4rem] items-center justify-between"
+                                        className="flex md:p-2 border-b h-[4rem] items-center justify-between"
                                     >
                                         <h2 className="text-sm font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="space-x-52 flex">
+                                        <div className=" gap-x-12 md:space-x-52 flex">
                                             <p>
                                                 {item.basic ? (
                                                     <FaCheck className="text-blue-600 text-lg" />
@@ -321,12 +321,12 @@ const FeatureSection = () => {
                                 return (
                                     <div
                                         key={item.name}
-                                        className="flex p-2 border-b h-[4rem] items-center justify-between"
+                                        className="flex md:p-2 border-b h-[4rem] items-center justify-between"
                                     >
                                         <h2 className="text-sm hover:text-blue-600 font-medium">
                                             {item.name}
                                         </h2>
-                                        <div className="space-x-52 flex">
+                                        <div className="gap-x-12 md:space-x-52 flex">
                                             <p>
                                                 {item.basic ? (
                                                     <FaCheck className="text-blue-600 text-lg" />
