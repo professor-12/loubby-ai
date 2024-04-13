@@ -4,7 +4,7 @@ import React from "react";
 const HeroSection = () => {
     return (
         <div className="bg-[rgb(249,250,251)]  px-4 md:px-0 mx-auto">
-            <div className="absolute -top-24 bg-heroBg bg-no-repeat z-10 w-[60%] h-full  md:w-full md:h-full" />
+            <div className="absolute hidden md:flex -top-24 bg-heroBg bg-no-repeat z-10 w-[60%] h-full  md:w-full md:h-full" />
             <div className="z-30 md:mt-20 mt-12 mb-5 space-y-5 pt-20 relative">
                 <h1 className="text-center lg:text-6xl   text-4xl md:text-5xl font-bold xl:leading-[4.4rem]">
                     Effortlessly Hire and Manage <br /> Remote{" "}

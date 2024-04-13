@@ -16,9 +16,12 @@ import { FiPlayCircle } from "react-icons/fi";
 import { IoMenu } from "react-icons/io5";
 import { employee_management, productLinks } from "@/lib/productslinkslist";
 import { NavLinks } from "@/lib/NavLinks";
-
+import { motion } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(!true);
+    const navigate = useRouter();
+    const active = usePathname();
     const [visible, setVisible] = useState<"a" | "b" | "c">("a");
     return (
         <header className="bg-white z-[10000] mb-42 left-0 right-0 shadow-inner  fixed  top-0  h-[5.25rem] flex items-center">
@@ -586,40 +589,68 @@ const NavBar = () => {
                         </ul>
                     </nav>
                     {/* { smaller devices} */}
-                    <nav
-                        className="fixed md:hidden  mx-1  transition-all duration-500 top-0 right-0 left-0 min-h-screen z-[100000] bg-white"
-                        style={{ top: isOpen ? 88 : -100000 }}
+                    <motion.nav
+                        animate={{ height: !isOpen ? "100vh" : 0 }}
+                        className="fixed md:hidden overflow-hidden top-20  mx-1  transition-all duration-500 right-0 left-0 z-[100000] bg-white"
                     >
                         <ul className="space-y-12  my-12 p-3">
-                            <li>
-                                <Link href={"/home"}>Home</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"} className="flex items-center">
-                                    <span>Products</span>{" "}
-                                    <span>
-                                        <RxCaretDown className="text-2xl" />
-                                    </span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>
-                                    <span>Candidate</span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={"/"}>
-                                    <span>Pricing</span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={"/"} className="flex items-center">
-                                    <span>Resources</span>{" "}
-                                    <span>
-                                        <RxCaretDown className="text-2xl" />
-                                    </span>
-                                </Link>
-                            </li>
+                            {NavLinks.map((items, index) => {
+                                if (index == 1) {
+                                    return (
+                                        <div key={items.name}>
+                                            <li className="flex font-medium  cursor-pointer space-x-1 items-center">
+                                                <div>{items.name}</div>
+                                                <span>
+                                                    <RxCaretDown className="text-2xl" />
+                                                </span>
+                                            </li>
+                                            <ul className="px-6 space-y-4 text-lg p-2">
+                                                <li className="cursor-pointer">
+                                                    Assess
+                                                </li>
+                                                <li className="cursor-pointer">
+                                                    Hiring
+                                                </li>
+                                                <li className="cursor-pointer">
+                                                    Attract
+                                                </li>
+                                                <li className="cursor-pointer">
+                                                    Manage
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    );
+                                }
+                                if (index == 4) {
+                                    return (
+                                        <li
+                                            key={items.name}
+                                            className="flex font-medium  cursor-pointer space-x-1 items-center"
+                                        >
+                                            <div>{items.name}</div>
+                                            <span>
+                                                <RxCaretDown className="text-2xl" />
+                                            </span>
+                                        </li>
+                                    );
+                                } else {
+                                    return (
+                                        <li
+                                            className={`${
+                                                active == items.link &&
+                                                "text-blue-500"
+                                            } cursor-pointer font-medium`}
+                                            key={items.name}
+                                            onClick={() => {
+                                                setIsOpen((prev) => !prev);
+                                                navigate.push(items.link);
+                                            }}
+                                        >
+                                            <div>{items.name}</div>
+                                        </li>
+                                    );
+                                }
+                            })}
                         </ul>
 
                         <div className="space-y-4 px-4">
@@ -630,7 +661,7 @@ const NavBar = () => {
                                 Get Started
                             </button>
                         </div>
-                    </nav>
+                    </motion.nav>
                 </div>
                 <div className="lg:hidden hidden md:flex">
                     {isOpen && <BackDrop onClick={() => setIsOpen(false)} />}
