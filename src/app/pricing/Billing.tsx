@@ -43,7 +43,7 @@ const Billing = () => {
                     <div className="font-semibold text-lg">Monthly</div>
                 </div>
             </div>
-            <div className="grid mx-auto px-8 md:px-0 container md:w-[85%] gap-6 lg:grid-cols-3 grid-cols-1 py-5">
+            <div className="grid mx-auto px-8 md:px-0 container md:w-[85%] gap-6 md:grid-cols-2 lg:grid-cols-3 grid-cols-1 py-5">
                 <div className="rounded-2xl space-y-6 border py-12 px-4 hover:shadow shadow-black backdrop:shadow-2xl transition-colors duration-500">
                     <div className="text-center space-y-2">
                         <h1 className="text-lg font-semibold">Free Forever</h1>
@@ -65,7 +65,7 @@ const Billing = () => {
                         ))}
                     </ul>
                     <h1 className="text-center font-sans font-semibold text-sm">
-                        Perfect freemium to try out all the <br /> features
+                        Perfect freemium to try out all the <br className="hidden md:block" /> features
                     </h1>
                     <button className="text-center p-2 text-lg font-bold text-white w-full mx-auto rounded-lg bg-[#444CE7]">
                         Select Plan
@@ -101,7 +101,7 @@ const Billing = () => {
                         ))}
                     </ul>
                     <h1 className="text-center text-gray-700 font-sans font-semibold text-sm">
-                        Perfect freemium to try out all the <br /> features
+                        Perfect freemium to try out all the <br className="hidden md:block" /> features
                     </h1>
                     <button className="text-center p-2 text-lg font-bold text-white w-full mx-auto rounded-lg bg-[#039855]">
                         Select Plan
@@ -135,14 +135,14 @@ const Billing = () => {
                         ))}
                     </ul>
                     <h1 className="text-center text-gray-700 font-sans font-semibold text-sm">
-                        Perfect freemium to try out all the <br /> features
+                        Perfect freemium to try out all the <br className="hidden md:block" /> features
                     </h1>
                     <button className="text-center p-2 text-lg font-bold text-white w-full mx-auto rounded-lg bg-[#DC6803]">
                         Select Plan
                     </button>
                 </div>
 
-                <div className="rounded-2xl text-gray-800  flex flex-col space-y-5 md:space-y-0 md:flex-row justify-between  border p-8  px-7 lg:col-span-3">
+                <div className="rounded-2xl text-gray-800  flex flex-col space-y-5 md:space-y-0 lg:flex-row justify-between  border p-8  px-7  lg:col-span-3">
                     <div className="flex-col flex justify-between">
                         <h1 className="font-semibold text-lg">
                             Talent Management
@@ -154,7 +154,7 @@ const Billing = () => {
                             /Seat per month
                         </p>
                         <p className="font-sans text-sm font-bold leading-tight">
-                            Perfect for teams with focus on <br /> employee
+                            Perfect for teams with focus on <br className="hidden md:block" /> employee
                             management
                         </p>
                     </div>

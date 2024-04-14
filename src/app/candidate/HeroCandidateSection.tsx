@@ -1,54 +1,15 @@
 "use client";
+import UseAnimationText from "@/hooks/UseAnimationText";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
+const listofWords = [
+    "Interview Preparation",
+    "Application Management",
+    "Job search",
+];
 const HeroCandidateSection = () => {
-    const listofWords = [
-        "Interview Preparation",
-        "Application Management",
-        "Job search",
-    ];
-    let time: NodeJS.Timeout;
-    const [index, setIndex] = useState(0);
-    const [Switch, setSwitch] = useState<"backwards" | "forwards">("forwards");
-    const [nextWordIndex, setNextWordIndex] = useState(0);
-    const nextWord = listofWords[nextWordIndex];
-    const activeTextLength = listofWords[nextWordIndex]?.length;
-
-    useEffect(() => {
-        let time = setInterval(() => {
-            if (Switch == "forwards") {
-                setNextWordIndex((prev) => {
-                    if (prev >= listofWords.length) return 0;
-                    return prev;
-                });
-                if (index >= activeTextLength) {
-                    return setSwitch("backwards");
-                } else {
-                    setIndex((prev) => {
-                        return prev + 1;
-                    });
-                }
-            } else if (Switch == "backwards") {
-                if (index <= 0) {
-                    setNextWordIndex((prev) => {
-                        if (prev <= listofWords.length) {
-                            return prev + 1;
-                        }
-                        return 0;
-                    });
-                    setSwitch("forwards");
-                } else if (index <= activeTextLength && index > 0) {
-                    setIndex((prev) => {
-                        return prev - 1;
-                    });
-                }
-            }
-        }, 150);
-        return () => {
-            clearInterval(time);
-        };
-    }, [Switch, activeTextLength, index, listofWords.length]);
+    const { nextWord, index } = UseAnimationText(listofWords);
 
     return (
         <div className="px-2">
