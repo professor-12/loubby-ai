@@ -187,13 +187,16 @@ const NavBar = () => {
                                                                             items,
                                                                             counter
                                                                         ) => (
-                                                                            <li
+                                                                            <Link
+                                                                                href={
+                                                                                    items.link
+                                                                                }
                                                                                 key={
                                                                                     items.title
                                                                                 }
                                                                                 className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
                                                                                     counter ==
-                                                                                    1
+                                                                                    0
                                                                                         ? "hover:bg-red-100/30"
                                                                                         : "hover:bg-blue-100/30"
                                                                                 }`}
@@ -219,7 +222,7 @@ const NavBar = () => {
                                                                                         }
                                                                                     </span>
                                                                                 </div>
-                                                                            </li>
+                                                                            </Link>
                                                                         )
                                                                     )}
                                                                 </ul>
@@ -232,13 +235,16 @@ const NavBar = () => {
                                                                             items,
                                                                             counter
                                                                         ) => (
-                                                                            <li
+                                                                            <Link
+                                                                                href={
+                                                                                    items.link
+                                                                                }
                                                                                 key={
                                                                                     items.title
                                                                                 }
                                                                                 className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
                                                                                     counter ==
-                                                                                    2
+                                                                                    0
                                                                                         ? "hover:bg-red-100/30"
                                                                                         : "hover:bg-blue-100/30"
                                                                                 }`}
@@ -264,7 +270,7 @@ const NavBar = () => {
                                                                                         }
                                                                                     </span>
                                                                                 </div>
-                                                                            </li>
+                                                                            </Link>
                                                                         )
                                                                     )}
                                                                 </ul>

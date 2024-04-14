@@ -16,10 +16,18 @@ const Page = () => {
             <Hero />
             <Cards />
             <div className="space-y-28 md:space-y-32">
-                <SlideShow1 />
-                <SlideShow2 />
-                <SlideShow3 />
-                <SlideShow4 />
+                <div id="quizzes-assessments">
+                    <SlideShow1 />
+                </div>
+                <div id="score-cards">
+                    <SlideShow2 />
+                </div>
+                <div id="ai-screening">
+                    <SlideShow3 />
+                </div>
+                <div id="collaborative-tools">
+                    <SlideShow4 />
+                </div>
             </div>
         </div>
     );
