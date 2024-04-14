@@ -10,7 +10,7 @@ const FAQ = () => {
                         Frequently asked Questions
                     </h1>
                     <h2 className="lg:text-4xl text-2xl  font-bold ">
-                        Frequently Asked Questions about <br></br> Loubby&apos;s
+                        Frequently Asked Questions about <br className="hidden md:block"/> Loubby&apos;s
                         Features and How They Work
                     </h2>
                 </div>

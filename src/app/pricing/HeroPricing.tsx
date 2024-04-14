@@ -8,11 +8,11 @@ const HeroPricing = () => {
                     Pricing
                 </h1>
                 <h1 className="text-center text-slate-800 text-3xl md:text-5xl font-bold">
-                    Flexible Pricing Plans for <br /> Every Hiring Need
+                    Flexible Pricing Plans for <br className="hidden md:block" /> Every Hiring Need
                 </h1>
                 <p className="">
                     Start Hiring with our 30-day free trial. No credit card
-                    required. Sign up today to unlock <br /> simplified
+                    required. Sign up today to unlock <br className="hidden md:block" /> simplified
                     recruitment, streamlined management, and a brighter future
                     for your team.
                 </p>

@@ -15,11 +15,28 @@ import { FiPlayCircle } from "react-icons/fi";
 import { IoMenu } from "react-icons/io5";
 import { employee_management, productLinks } from "@/lib/productslinkslist";
 import { NavLinks } from "@/lib/NavLinks";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
+
+
+
+
+
+
+const navLinkProducts = [
+    { name: "assess", link: "" },
+    { name: "hiring", link: "" },
+    { name: "attract", link: "" },
+    { name: "manage", link: "" },
+    
+]
+
+
+
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const [openProductDropDown, setOpenProductDropDown] = useState(false);
     const navigate = useRouter();
     const active = usePathname();
     const [visible, setVisible] = useState<"a" | "b" | "c">("a");
@@ -547,12 +564,14 @@ const NavBar = () => {
                         </ul>
                     </nav>
                     {/* endlarge screen */}
+                    {/* Small Screen */}
 
                     <IoMenu
                         className="lg:hidden cursor-pointer text-3xl"
-                        onClick={() => setIsOpen((prev) => !prev)}
+                        onClick={() => {
+                            setIsOpen((_) => !_);
+                        }}
                     />
-                    {/* Small Screen */}
                     <nav
                         className="fixed lg:hidden hidden md:block h-screen transition-all duration-500 top-0 bottom-0 min-w-[40%] z-[100000] bg-white"
                         style={{ left: isOpen ? 0 : -1000 }}
@@ -565,67 +584,39 @@ const NavBar = () => {
                         </div>
 
                         <ul className="space-y-8 my-12 p-4">
-                            <li>
-                                <Link href={"/home"}>Home</Link>
-                            </li>
-                            <li>
-                                <Link href={"/"} className="flex items-center">
-                                    <span>Products</span>{" "}
-                                    <span>
-                                        <RxCaretDown className="text-2xl" />
-                                    </span>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/candidate">Candidate</Link>
-                            </li>
-                            <li>
-                                <Link href={"/pricing"}>Pricing</Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href={"/resources"}
-                                    className="flex items-center"
-                                >
-                                    <span>Resources</span>{" "}
-                                    <span>
-                                        <RxCaretDown className="text-2xl" />
-                                    </span>
-                                </Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    {/* { smaller devices} */}
-                    <motion.nav
-                        initial={{ height: 0 }}
-                        animate={{ height: !isOpen ? "100dvh" : 0 }}
-                        className="fixed md:hidden overflow-auto top-20 bg-white  mx-1  transition-all duration-500 right-0 left-0 z-10 "
-                    >
-                        <ul className="space-y-7  p-3 bg-white">
                             {NavLinks.map((items, index) => {
                                 if (index == 1) {
                                     return (
                                         <div key={items.name}>
-                                            <li className="flex font-medium  cursor-pointer space-x-1 items-center">
+                                            <li
+                                                onClick={(e) =>
+                                                    setOpenProductDropDown(
+                                                        (prev) => !prev
+                                                    )
+                                                }
+                                                className="flex font-medium  cursor-pointer space-x-1 items-center"
+                                            >
                                                 <div>{items.name}</div>
                                                 <span>
                                                     <RxCaretDown className="text-2xl" />
                                                 </span>
                                             </li>
-                                            <ul className="px-6 space-y-5 text-lg p-3 hidden">
-                                                <li className="cursor-pointer">
-                                                    Assess
-                                                </li>
-                                                <li className="cursor-pointer">
-                                                    Hiring
-                                                </li>
-                                                <li className="cursor-pointer">
-                                                    Attract
-                                                </li>
-                                                <li className="cursor-pointer">
-                                                    Manage
-                                                </li>
-                                            </ul>
+                                            {openProductDropDown && (
+                                                <ul className="px-6 space-y-5 text-lg p-3">
+                                                    <li className="cursor-pointer">
+                                                        Assess
+                                                    </li>
+                                                    <li className="cursor-pointer">
+                                                        Hiring
+                                                    </li>
+                                                    <li className="cursor-pointer">
+                                                        Attract
+                                                    </li>
+                                                    <li className="cursor-pointer">
+                                                        Manage
+                                                    </li>
+                                                </ul>
+                                            )}
                                         </div>
                                     );
                                 }
@@ -660,19 +651,112 @@ const NavBar = () => {
                                 }
                             })}
                         </ul>
+                    </nav>
 
-                        <div className="space-y-4 px-4 my-6">
-                            <button className="bg-[#EAF3FF] text-[#1A73E8]  text-center w-full p-3 rounded-xl">
-                                Login
-                            </button>
-                            <button className="bg-[#1A73E8] hover:bg-blue-700 transition duration-200 text-white text-center w-full p-3 rounded-xl">
-                                Get Started
-                            </button>
-                        </div>
-                    </motion.nav>
+                    {/* End of small screen */}
+                    {/* { smaller devices} */}
+                    <AnimatePresence>
+                        {isOpen && (
+                            <motion.nav
+                                initial={{ height: 0 }}
+                                animate={{ height: "100dvh" }}
+                                exit={{ height: 0, opacity: [0, 0.3] }}
+                                className="fixed md:hidden overflow-auto top-20 bg-white  mx-1  transition-all duration-500 right-0 left-0 z-10 "
+                            >
+                                <ul className="space-y-7  p-3 bg-white">
+                                    {NavLinks.map((items, index) => {
+                                        if (index == 1) {
+                                            return (
+                                                <div key={items.name}>
+                                                    <li
+                                                        onClick={(e) =>
+                                                            setOpenProductDropDown(
+                                                                (prev) => !prev
+                                                            )
+                                                        }
+                                                        className="flex font-medium  cursor-pointer space-x-1 items-center"
+                                                    >
+                                                        <div>{items.name}</div>
+                                                        <span>
+                                                            <RxCaretDown className="text-2xl" />
+                                                        </span>
+                                                    </li>
+                                                    {openProductDropDown && (
+                                                        <ul className="px-6 space-y-5 text-lg p-3">
+                                                            <li className="cursor-pointer">
+                                                                Assess
+                                                            </li>
+                                                            <li className="cursor-pointer">
+                                                                Hiring
+                                                            </li>
+                                                            <li className="cursor-pointer">
+                                                                Attract
+                                                            </li>
+                                                            <li className="cursor-pointer">
+                                                                Manage
+                                                            </li>
+                                                        </ul>
+                                                    )}
+                                                </div>
+                                            );
+                                        }
+
+                                        if (index == 4) {
+                                            return (
+                                                <li
+                                                    key={items.name}
+                                                    className="flex font-medium  cursor-pointer space-x-1 items-center"
+                                                >
+                                                    <div>{items.name}</div>
+                                                    <span>
+                                                        <RxCaretDown className="text-2xl" />
+                                                    </span>
+                                                </li>
+                                            );
+                                        } else {
+                                            return (
+                                                <li
+                                                    className={`${
+                                                        active == items.link &&
+                                                        "text-blue-500"
+                                                    } cursor-pointer font-medium`}
+                                                    key={items.name}
+                                                    onClick={() => {
+                                                        setIsOpen(
+                                                            (prev) => !prev
+                                                        );
+                                                        navigate.push(
+                                                            items.link
+                                                        );
+                                                    }}
+                                                >
+                                                    <div>{items.name}</div>
+                                                </li>
+                                            );
+                                        }
+                                    })}
+                                </ul>
+
+                                <div className="space-y-4 px-4 my-6">
+                                    <button className="bg-[#EAF3FF] text-[#1A73E8]  text-center w-full p-3 rounded-xl">
+                                        Login
+                                    </button>
+                                    <button className="bg-[#1A73E8] hover:bg-blue-700 transition duration-200 text-white text-center w-full p-3 rounded-xl">
+                                        Get Started
+                                    </button>
+                                </div>
+                            </motion.nav>
+                        )}
+                    </AnimatePresence>
                 </div>
                 <div className="lg:hidden hidden md:flex">
-                    {isOpen && <BackDrop onClick={() => setIsOpen(false)} />}
+                    {isOpen && (
+                        <BackDrop
+                            onClick={() => {
+                                setIsOpen(false);
+                            }}
+                        />
+                    )}
                 </div>
 
                 <div className="space-x-2 hidden md:flex">
