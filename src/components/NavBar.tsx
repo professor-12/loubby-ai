@@ -18,21 +18,12 @@ import { NavLinks } from "@/lib/NavLinks";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 
-
-
-
-
-
 const navLinkProducts = [
-    { name: "assess", link: "" },
-    { name: "hiring", link: "" },
-    { name: "attract", link: "" },
-    { name: "manage", link: "" },
-    
-]
-
-
-
+    { name: "Assess", link: "/assess" },
+    { name: "Hiring", link: "/hiring" },
+    { name: "Attract", link: "/attract" },
+    { name: "Manage", link: "/manage" },
+];
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -411,7 +402,7 @@ const NavBar = () => {
                                                             }`}
                                                         >
                                                             <div className="flex  space-x-4">
-                                                                <div className="bg-blue-200/30 border rounded-xl p-5 space-y-2">
+                                                                <div className="bg-blue-200/30 border rounded-xl p-5 space-y-5">
                                                                     <Image
                                                                         src={
                                                                             "/Loubby-Webapp-Header.png"
@@ -564,8 +555,8 @@ const NavBar = () => {
                         </ul>
                     </nav>
                     {/* endlarge screen */}
-                    {/* Small Screen */}
 
+                    {/* Small Screen */}
                     <IoMenu
                         className="lg:hidden cursor-pointer text-3xl"
                         onClick={() => {
@@ -660,7 +651,7 @@ const NavBar = () => {
                             <motion.nav
                                 initial={{ height: 0 }}
                                 animate={{ height: "100dvh" }}
-                                exit={{ height: 0, opacity: [0, 0.3] }}
+                                exit={{ opacity: [0, 0.3], height: 0 }}
                                 className="fixed md:hidden overflow-auto top-20 bg-white  mx-1  transition-all duration-500 right-0 left-0 z-10 "
                             >
                                 <ul className="space-y-7  p-3 bg-white">
@@ -682,19 +673,29 @@ const NavBar = () => {
                                                         </span>
                                                     </li>
                                                     {openProductDropDown && (
-                                                        <ul className="px-6 space-y-5 text-lg p-3">
-                                                            <li className="cursor-pointer">
-                                                                Assess
-                                                            </li>
-                                                            <li className="cursor-pointer">
-                                                                Hiring
-                                                            </li>
-                                                            <li className="cursor-pointer">
-                                                                Attract
-                                                            </li>
-                                                            <li className="cursor-pointer">
-                                                                Manage
-                                                            </li>
+                                                        <ul className="px-6 flex flex-col  space-y-5 text-lg p-3">
+                                                            {navLinkProducts.map(
+                                                                (link) => (
+                                                                    <Link
+                                                                        onClick={() =>
+                                                                            setIsOpen(
+                                                                                false
+                                                                            )
+                                                                        }
+                                                                        key={
+                                                                            link.link
+                                                                        }
+                                                                        href={
+                                                                            link.link
+                                                                        }
+                                                                        className="cursor-pointer"
+                                                                    >
+                                                                        {
+                                                                            link.name
+                                                                        }
+                                                                    </Link>
+                                                                )
+                                                            )}
                                                         </ul>
                                                     )}
                                                 </div>
