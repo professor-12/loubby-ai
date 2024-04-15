@@ -21,7 +21,7 @@ import { usePathname, useRouter } from "next/navigation";
 const navLinkProducts = [
     { name: "Assess", link: "/assess" },
     { name: "Hiring", link: "/hiring" },
-    { name: "Attract", link: "/attract" },
+    { name: "Attract", link: "/attracts" },
     { name: "Manage", link: "/manage" },
 ];
 
@@ -604,18 +604,26 @@ const NavBar = () => {
                                             </li>
                                             {openProductDropDown && (
                                                 <ul className="px-6 space-y-5 text-lg p-3">
-                                                    <li className="cursor-pointer">
-                                                        Assess
-                                                    </li>
-                                                    <li className="cursor-pointer">
-                                                        Hiring
-                                                    </li>
-                                                    <li className="cursor-pointer">
-                                                        Attract
-                                                    </li>
-                                                    <li className="cursor-pointer">
-                                                        Manage
-                                                    </li>
+                                                    {navLinkProducts.map(
+                                                        (items) => (
+                                                            <li
+                                                                key={items.name}
+                                                                onClick={(
+                                                                    e
+                                                                ) => {
+                                                                    navigate.push(
+                                                                        items.link
+                                                                    );
+                                                                    setIsOpen(
+                                                                        false
+                                                                    );
+                                                                }}
+                                                                className="cursor-pointer"
+                                                            >
+                                                                {items.name}
+                                                            </li>
+                                                        )
+                                                    )}
                                                 </ul>
                                             )}
                                         </div>
