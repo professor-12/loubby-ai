@@ -1,15 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { PiCheckBold } from "react-icons/pi";
-import { SlideShowList2 } from "../candidate/lib/slideShowList";
 
 const slideShow = [
-    "Job Listing Creation",
-    "Candidate Filtering",
-    "Application Management",
-    "Job Promotion",
-    "Candidate Communication",
-    "Talent Pipeline",
+    "User Roles",
+    "Customizable Permission",
+    "Team Delegation",
+    "Activity Logs",
+    "Multi-level Approval",
+    "Access Control",
 ];
 const SlideShow2 = () => {
     return (
@@ -34,17 +33,18 @@ const SlideShow2 = () => {
             </div>
             <div className="space-y-3 mt-20 md:my-0">
                 <h1 className="text-SpecialBlue text-lg font-semibold">
-                    Real-Time Interview
+                    Virtual Fair
                 </h1>
                 <p className="text-2xl md:text-4xl font-semibold">
-                    Seamless in-app interviews in one click
+                    Transform hiring events into digital success stories
                 </p>
                 <p className="md:text-lg">
-                    Loubby’s in-app interview feature revolutionizes the way you
-                    conduct interviews, offering a convenient and time-saving
-                    solution for evaluating candidates. With built-in video and
-                    audio capabilities, you can effortlessly connect with
-                    candidates remotely and assess their skills.
+                    Loubby’s Virtual Fair feature offers a transformative
+                    solution to host and manage virtual hiring events with ease
+                    and also provides you with a comprehensive platform to
+                    connect with talented candidates, showcase your company
+                    culture, and make meaningful connections that lead to
+                    successful hires.
                 </p>
                 <div className="grid md:gap-3 gap-2 md:grid-cols-2 p-2">
                     {slideShow.map((item) => (
