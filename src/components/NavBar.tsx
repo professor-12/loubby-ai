@@ -226,7 +226,7 @@ const NavBar = () => {
                                                                         )
                                                                     )}
                                                                 </ul>
-                                                                <ul className="sapce-y-5">
+                                                                <ul className="space-y-5">
                                                                     <li className="font-semibold">
                                                                         MANAGEMENT
                                                                     </li>
@@ -400,6 +400,7 @@ const NavBar = () => {
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                         <div
                                                             className={`${
                                                                 visible !==
