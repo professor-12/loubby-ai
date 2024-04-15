@@ -290,7 +290,10 @@ const NavBar = () => {
                                                                             items,
                                                                             counter
                                                                         ) => (
-                                                                            <li
+                                                                            <Link
+                                                                                href={
+                                                                                    items.link
+                                                                                }
                                                                                 key={
                                                                                     items.title
                                                                                 }
@@ -322,7 +325,7 @@ const NavBar = () => {
                                                                                         }
                                                                                     </span>
                                                                                 </div>
-                                                                            </li>
+                                                                            </Link>
                                                                         )
                                                                     )}
                                                                 </ul>
