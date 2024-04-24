@@ -2,8 +2,8 @@ import React from "react";
 
 const Stats = () => {
     return (
-        <div className="py-16 space-y-10">
-            <h1 className="lg:text-4xl text-2xl font-semibold text-center">
+        <div className="py-16 space-y-10 px-4">
+            <h1 className="lg:text-4xl text-xl md:text-2xl font-semibold text-center">
                 Behind every successful company is a <br /> perfect hire for the
                 perfect role
             </h1>

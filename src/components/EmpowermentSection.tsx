@@ -18,8 +18,8 @@ const EmpowermentSection = () => {
                 </p>
             </div>
             {/* {Grid section} */}
-            <div className="grid lg:grid-cols-5 gap-7 py-5 ">
-                <div className="lg:col-span-3 space-y-3  min-h-[12rem] rounded-xl p-8 border-[#D0D5DD]  border-8">
+            <div className="grid md:grid-cols-5 gap-7 py-5 ">
+                <div className="md:col-span-3 space-y-3  min-h-[12rem] rounded-xl p-8 border-[#D0D5DD]  border-8">
                     <div>
                         <Image
                             src={"/Frame-446.png"}
@@ -42,7 +42,7 @@ const EmpowermentSection = () => {
                         </p>
                     </div>
                 </div>
-                <div className="lg:col-span-2 space-y-4 p-8 rounded-xl border-[#D0D5DD]  border-8">
+                <div className="md:col-span-2 space-y-4 p-8 rounded-xl border-[#D0D5DD]  border-8">
                     <div className="border rounded-lg p-4">
                         <Image
                             src={"/Section-3.png"}
@@ -65,7 +65,7 @@ const EmpowermentSection = () => {
                         </p>
                     </div>
                 </div>
-                <div className="rounded-xl p-8 lg:col-span-2  space-y-5 border-[#D0D5DD]  border-8">
+                <div className="rounded-xl p-8 md:col-span-2  space-y-5 border-[#D0D5DD]  border-8">
                     <div className="border rounded-lg p-4">
                         <Image
                             src={"/Section-4.png"}
@@ -87,7 +87,7 @@ const EmpowermentSection = () => {
                         </p>
                     </div>
                 </div>
-                <div className="lg:col-span-3 rounded-xl p-8 space-y-4  border-[#D0D5DD]  border-8">
+                <div className="md:col-span-3 rounded-xl p-8 space-y-4  border-[#D0D5DD]  border-8">
                     <div className="rounded-lg p-4">
                         <Image
                             src={"/Container-5-1024x619.png"}
