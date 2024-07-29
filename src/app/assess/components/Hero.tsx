@@ -1,31 +1,36 @@
 "use client";
 import UseAnimationText from "@/hooks/UseAnimationText";
 import Image from "next/image";
-
 import React from "react";
 
-const listofWords = ["design", "developer", "Devops", "HR", "loubby"];
 const Hero = () => {
-    const { nextWord, index } = UseAnimationText(listofWords);
+    const { index, nextWord } = UseAnimationText([
+        "identify",
+        "evaluate",
+        "select",
+    ]);
     return (
         <div className="flex container justify-between space-y-12 flex-col md:flex-row  md:items-center">
             <div className="space-y-4">
-                <h2 className="text-SpecialBlue font-semibold">
-                    Hiring Feature{" "}
+                <h2 className="text-SpecialBlue md:text-2xl font-semibold">
+                    Assesment Feature{" "}
                 </h2>
                 <h1 className="text-4xl lg:text-5xl font-bold">
-                    Discover your <br /> perfect{" "}
-                    <span className="text-SpecialBlue">
-                        {nextWord?.substring(0, index)}{" "}
-                    </span>
-                    hire
+                    Optimize <br className="hidden md:block" /> assessment to{" "}
+                    <br className="hidden md:block" />
+                    <span className="text-primaryBlue">
+                        {nextWord?.substring(0, index)}
+                        <span className="animate-ping text-slate-800">|</span>
+                    </span>{" "}
+                    the best fit
                 </h1>
                 <p className="text-muted/90 md:text-lg">
-                    Streamline your hiring process with Loubby’s powerful <br />
-                    features and make informed hiring decisions
+                    Make informed hiring decisions with powerful{" "}
+                    <br className="hidden md:block" /> candidate evaluation
+                    tools.
                 </p>
                 <button className="bg-SpecialBlue font-medium p-3 px-4 text-white rounded-md">
-                    Start Hiring
+                    Assess Candidates
                 </button>
             </div>
             <div className="overflow-hidden  shadow-lg rounded">
@@ -33,8 +38,8 @@ const Hero = () => {
                     className="object-scale-down"
                     src={"/Dashboard.png"}
                     alt=""
-                    height={450}
-                    width={540}
+                    height={470}
+                    width={600}
                 />
             </div>
         </div>

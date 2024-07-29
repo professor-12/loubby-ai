@@ -1,28 +1,27 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 import { PiCheckBold } from "react-icons/pi";
-import { SlideShowList2 } from "../candidate/lib/slideShowList";
 
 const slideShow = [
-    "Job Listing Creation",
-    "Candidate Filtering",
-    "Application Management",
-    "Job Promotion",
-    "Candidate Communication",
-    "Talent Pipeline",
+    "Branding and Customization",
+    "Company Descriptions",
+    "Job Listings",
+    "Rich Media Content",
+    "Social Proof",
+    "Employee Benefits and Perks",
 ];
-const SlideShow2 = () => {
+const SlideShow4 = () => {
     return (
         <div
-            id="real-time-interview"
-            className="flex px-4 flex-col lg:flex-row-reverse justify-between md:space-x-12 mt-36  items-center"
+            id="talent-pool"
+            className="flex  px-4 md:px-0 flex-col md:flex-row-reverse justify-between md:space-x-12  md:my-36 items-center"
         >
             <div className="md:flex md:space-y-5 pr-10 space-y-9 relative px-4 items-center justify-between w-full xl:w-[75%] mx-auto">
                 <div className="relative h-auto lg:ml-8">
                     <div className="lg:w-[30rem] w-full md:w-[26rem]">
-                        <div className="lg:h-[28rem] h-[20rem] border-SpecialBlue mr-12 w-full  border-8  rounded-xl">
+                        <div className="lg:h-[28rem] h-[20rem] border-primaryOrange w-full  border-8  rounded-xl">
                             <Image
-                                src={"/Profile-card-2.png"}
+                                src={"/Container.png"}
                                 alt="slideShowImage"
                                 width={700}
                                 height={700}
@@ -32,19 +31,20 @@ const SlideShow2 = () => {
                     </div>
                 </div>
             </div>
-            <div className="space-y-3 mt-20 md:my-0">
-                <h1 className="text-SpecialBlue text-lg font-semibold">
-                    Real-Time Interview
+            <div className="space-y-3 my-32 md:my-0">
+                <h1 className="text-primaryOrange text-lg font-semibold">
+                    Company Job Page
                 </h1>
-                <p className="text-2xl md:text-4xl font-semibold">
-                    Seamless in-app interviews in one click
+                <p className="md:text-4xl text-2xl font-semibold">
+                    Create a catchy company job page to attract top talent
                 </p>
                 <p className="md:text-lg">
-                    Loubby’s in-app interview feature revolutionizes the way you
-                    conduct interviews, offering a convenient and time-saving
-                    solution for evaluating candidates. With built-in video and
-                    audio capabilities, you can effortlessly connect with
-                    candidates remotely and assess their skills.
+                    Loubby’s Company Job Page feature enables you to create an
+                    informative job page that showcases your company’s culture,
+                    values, and job opportunities. With customizable design
+                    options and rich content, you can effectively attract top
+                    talent and provide candidates with a comprehensive overview
+                    of your organization.
                 </p>
                 <div className="grid md:gap-3 gap-2 md:grid-cols-2 p-2">
                     {slideShow.map((item) => (
@@ -53,7 +53,7 @@ const SlideShow2 = () => {
                             className="space-x-2 items-center  flex"
                         >
                             <span>
-                                <PiCheckBold className="text-SpecialBlue text-2xl  font-extrabold" />
+                                <PiCheckBold className="text-primaryOrange text-2xl  font-extrabold" />
                             </span>
                             <span className="text-slate-700">{item}</span>
                         </div>
@@ -64,4 +64,4 @@ const SlideShow2 = () => {
     );
 };
 
-export default SlideShow2;
+export default SlideShow4;
