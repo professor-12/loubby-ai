@@ -8,7 +8,7 @@ const listofWords = ["design", "developer", "Devops", "HR", "loubby"];
 const Hero = () => {
     const { nextWord, index } = UseAnimationText(listofWords);
     return (
-        <div className="flex justify-between space-y-12 flex-col md:flex-row items-center">
+        <div className="flex container justify-between space-y-12 flex-col md:flex-row  md:items-center">
             <div className="space-y-4">
                 <h2 className="text-SpecialBlue font-semibold">
                     Hiring Feature{" "}

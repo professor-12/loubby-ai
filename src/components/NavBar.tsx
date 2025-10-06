@@ -18,21 +18,12 @@ import { NavLinks } from "@/lib/NavLinks";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname, useRouter } from "next/navigation";
 
-
-
-
-
-
 const navLinkProducts = [
-    { name: "assess", link: "" },
-    { name: "hiring", link: "" },
-    { name: "attract", link: "" },
-    { name: "manage", link: "" },
-    
-]
-
-
-
+    { name: "Assess", link: "/assess" },
+    { name: "Hiring", link: "/hiring" },
+    { name: "Attract", link: "/attracts" },
+    { name: "Manage", link: "/manage" },
+];
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -79,11 +70,10 @@ const NavBar = () => {
                                                                         "a"
                                                                     )
                                                                 }
-                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue  cursor-pointer  font-medium gap-4 items-center ${
-                                                                    visible ==
-                                                                        "a" &&
+                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue  cursor-pointer  font-medium gap-4 items-center ${visible ==
+                                                                    "a" &&
                                                                     "bg-lightOpacityBlue"
-                                                                }`}
+                                                                    }`}
                                                             >
                                                                 <FaUser />
                                                                 <p>
@@ -97,11 +87,10 @@ const NavBar = () => {
                                                                         "b"
                                                                     )
                                                                 }
-                                                                className={`flex p-3 px-5 transition-colors duration-300 rounded-xl hover:bg-lightOpacityBlue cursor-pointer  font-medium gap-4 items-center ${
-                                                                    visible ==
-                                                                        "b" &&
+                                                                className={`flex p-3 px-5 transition-colors duration-300 rounded-xl hover:bg-lightOpacityBlue cursor-pointer  font-medium gap-4 items-center ${visible ==
+                                                                    "b" &&
                                                                     "bg-lightOpacityBlue"
-                                                                }`}
+                                                                    }`}
                                                             >
                                                                 <LiaBoxesSolid />
                                                                 <p>
@@ -115,11 +104,10 @@ const NavBar = () => {
                                                                         "c"
                                                                     )
                                                                 }
-                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue cursor-pointer   font-medium gap-4 items-center ${
-                                                                    visible ==
-                                                                        "c" &&
+                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue cursor-pointer   font-medium gap-4 items-center ${visible ==
+                                                                    "c" &&
                                                                     "bg-lightOpacityBlue"
-                                                                }`}
+                                                                    }`}
                                                             >
                                                                 <GrRobot />
                                                                 <p>
@@ -132,11 +120,10 @@ const NavBar = () => {
                                                             <div className="w-[1rem] h-[100%] border-r mr-5" />
                                                         </div>
                                                         <div
-                                                            className={`${
-                                                                visible !==
-                                                                    "a" &&
+                                                            className={`${visible !==
+                                                                "a" &&
                                                                 "hidden"
-                                                            }`}
+                                                                }`}
                                                         >
                                                             <div className="grid grid-cols-3 gap-4">
                                                                 <ul className="space-y-5">
@@ -155,12 +142,11 @@ const NavBar = () => {
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
                                                                                     0
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -196,16 +182,18 @@ const NavBar = () => {
                                                                             items,
                                                                             counter
                                                                         ) => (
-                                                                            <li
+                                                                            <Link
+                                                                                href={
+                                                                                    items.link
+                                                                                }
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
-                                                                                    1
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
+                                                                                    0
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -228,11 +216,11 @@ const NavBar = () => {
                                                                                         }
                                                                                     </span>
                                                                                 </div>
-                                                                            </li>
+                                                                            </Link>
                                                                         )
                                                                     )}
                                                                 </ul>
-                                                                <ul className="sapce-y-5">
+                                                                <ul className="space-y-5">
                                                                     <li className="font-semibold">
                                                                         MANAGEMENT
                                                                     </li>
@@ -241,16 +229,18 @@ const NavBar = () => {
                                                                             items,
                                                                             counter
                                                                         ) => (
-                                                                            <li
+                                                                            <Link
+                                                                                href={
+                                                                                    items.link
+                                                                                }
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
-                                                                                    2
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
+                                                                                    0
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -273,18 +263,17 @@ const NavBar = () => {
                                                                                         }
                                                                                     </span>
                                                                                 </div>
-                                                                            </li>
+                                                                            </Link>
                                                                         )
                                                                     )}
                                                                 </ul>
                                                             </div>
                                                         </div>
                                                         <div
-                                                            className={`${
-                                                                visible !==
-                                                                    "b" &&
+                                                            className={`${visible !==
+                                                                "b" &&
                                                                 "hidden"
-                                                            }`}
+                                                                }`}
                                                         >
                                                             <div className="grid grid-cols-3 gap-4">
                                                                 <ul className="space-y-5">
@@ -293,16 +282,18 @@ const NavBar = () => {
                                                                             items,
                                                                             counter
                                                                         ) => (
-                                                                            <li
+                                                                            <Link
+                                                                                href={
+                                                                                    items.link
+                                                                                }
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
                                                                                     0
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -325,7 +316,7 @@ const NavBar = () => {
                                                                                         }
                                                                                     </span>
                                                                                 </div>
-                                                                            </li>
+                                                                            </Link>
                                                                         )
                                                                     )}
                                                                 </ul>
@@ -339,12 +330,11 @@ const NavBar = () => {
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
                                                                                     1
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -403,15 +393,15 @@ const NavBar = () => {
                                                                 </div>
                                                             </div>
                                                         </div>
+
                                                         <div
-                                                            className={`${
-                                                                visible !==
-                                                                    "c" &&
+                                                            className={`${visible !==
+                                                                "c" &&
                                                                 "hidden"
-                                                            }`}
+                                                                }`}
                                                         >
                                                             <div className="flex  space-x-4">
-                                                                <div className="bg-blue-200/30 border rounded-xl p-5 space-y-2">
+                                                                <div className="bg-blue-200/30 border rounded-xl p-5 space-y-5">
                                                                     <Image
                                                                         src={
                                                                             "/Loubby-Webapp-Header.png"
@@ -564,8 +554,8 @@ const NavBar = () => {
                         </ul>
                     </nav>
                     {/* endlarge screen */}
-                    {/* Small Screen */}
 
+                    {/* Small Screen */}
                     <IoMenu
                         className="lg:hidden cursor-pointer text-3xl"
                         onClick={() => {
@@ -603,18 +593,26 @@ const NavBar = () => {
                                             </li>
                                             {openProductDropDown && (
                                                 <ul className="px-6 space-y-5 text-lg p-3">
-                                                    <li className="cursor-pointer">
-                                                        Assess
-                                                    </li>
-                                                    <li className="cursor-pointer">
-                                                        Hiring
-                                                    </li>
-                                                    <li className="cursor-pointer">
-                                                        Attract
-                                                    </li>
-                                                    <li className="cursor-pointer">
-                                                        Manage
-                                                    </li>
+                                                    {navLinkProducts.map(
+                                                        (items) => (
+                                                            <li
+                                                                key={items.name}
+                                                                onClick={(
+                                                                    e
+                                                                ) => {
+                                                                    navigate.push(
+                                                                        items.link
+                                                                    );
+                                                                    setIsOpen(
+                                                                        false
+                                                                    );
+                                                                }}
+                                                                className="cursor-pointer"
+                                                            >
+                                                                {items.name}
+                                                            </li>
+                                                        )
+                                                    )}
                                                 </ul>
                                             )}
                                         </div>
@@ -635,10 +633,9 @@ const NavBar = () => {
                                 } else {
                                     return (
                                         <li
-                                            className={`${
-                                                active == items.link &&
+                                            className={`${active == items.link &&
                                                 "text-blue-500"
-                                            } cursor-pointer font-medium`}
+                                                } cursor-pointer font-medium`}
                                             key={items.name}
                                             onClick={() => {
                                                 setIsOpen((prev) => !prev);
@@ -660,7 +657,7 @@ const NavBar = () => {
                             <motion.nav
                                 initial={{ height: 0 }}
                                 animate={{ height: "100dvh" }}
-                                exit={{ height: 0, opacity: [0, 0.3] }}
+                                exit={{ opacity: [0, 0.3], height: 0 }}
                                 className="fixed md:hidden overflow-auto top-20 bg-white  mx-1  transition-all duration-500 right-0 left-0 z-10 "
                             >
                                 <ul className="space-y-7  p-3 bg-white">
@@ -682,19 +679,29 @@ const NavBar = () => {
                                                         </span>
                                                     </li>
                                                     {openProductDropDown && (
-                                                        <ul className="px-6 space-y-5 text-lg p-3">
-                                                            <li className="cursor-pointer">
-                                                                Assess
-                                                            </li>
-                                                            <li className="cursor-pointer">
-                                                                Hiring
-                                                            </li>
-                                                            <li className="cursor-pointer">
-                                                                Attract
-                                                            </li>
-                                                            <li className="cursor-pointer">
-                                                                Manage
-                                                            </li>
+                                                        <ul className="px-6 flex flex-col  space-y-5 text-lg p-3">
+                                                            {navLinkProducts.map(
+                                                                (link) => (
+                                                                    <Link
+                                                                        onClick={() =>
+                                                                            setIsOpen(
+                                                                                false
+                                                                            )
+                                                                        }
+                                                                        key={
+                                                                            link.link
+                                                                        }
+                                                                        href={
+                                                                            link.link
+                                                                        }
+                                                                        className="cursor-pointer"
+                                                                    >
+                                                                        {
+                                                                            link.name
+                                                                        }
+                                                                    </Link>
+                                                                )
+                                                            )}
                                                         </ul>
                                                     )}
                                                 </div>
@@ -716,10 +723,9 @@ const NavBar = () => {
                                         } else {
                                             return (
                                                 <li
-                                                    className={`${
-                                                        active == items.link &&
+                                                    className={`${active == items.link &&
                                                         "text-blue-500"
-                                                    } cursor-pointer font-medium`}
+                                                        } cursor-pointer font-medium`}
                                                     key={items.name}
                                                     onClick={() => {
                                                         setIsOpen(
@@ -738,10 +744,14 @@ const NavBar = () => {
                                 </ul>
 
                                 <div className="space-y-4 px-4 my-6">
-                                    <button className="bg-[#EAF3FF] text-[#1A73E8]  text-center w-full p-3 rounded-xl">
+                                    <button onClick={() => {
+                                        navigate.push("https://emmanuel-loubby-app.netlify.app/onboarding/login")
+                                    }} className="bg-[#EAF3FF] text-[#1A73E8]  text-center w-full p-3 rounded-xl">
                                         Login
                                     </button>
-                                    <button className="bg-[#1A73E8] hover:bg-blue-700 transition duration-200 text-white text-center w-full p-3 rounded-xl">
+                                    <button onClick={() => {
+                                        navigate.push("https://emmanuel-loubby-app.netlify.app/onboarding/login")
+                                    }} className="bg-[#1A73E8] hover:bg-blue-700 transition duration-200 text-white text-center w-full p-3 rounded-xl">
                                         Get Started
                                     </button>
                                 </div>
@@ -760,10 +770,14 @@ const NavBar = () => {
                 </div>
 
                 <div className="space-x-2 hidden md:flex">
-                    <Button className="bg-lightOpacityBlue  text-blue-800 font-semibold px-5 rounded-lg p-3">
+                    <Button onClick={() => {
+                        navigate.push("https://emmanuel-loubby-app.netlify.app/onboarding/login")
+                    }} className="bg-lightOpacityBlue  text-blue-800 font-semibold px-5 rounded-lg p-3">
                         Sign up/Login
                     </Button>
-                    <Button className="bg-primaryBlue  text-white font-semibold px-5 rounded-lg p-3">
+                    <Button onClick={() => {
+                        navigate.push("https://emmanuel-loubby-app.netlify.app/onboarding/login")
+                    }} className="bg-primaryBlue  text-white font-semibold px-5 rounded-lg p-3">
                         Book a Demo
                     </Button>
                 </div>

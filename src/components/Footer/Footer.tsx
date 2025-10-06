@@ -24,9 +24,9 @@ const Footer = () => {
                             best
                         </p>
                     </div>
-                    <div className="bg-white p-4 px-6 rounded-xl text-black text-center flex items-center justify-center font-medium">
+                    <Link href={"https://emmanuel-loubby-app.netlify.app/onboarding/login"} className="bg-white p-4 px-6 rounded-xl text-black text-center flex items-center justify-center font-medium">
                         Get Started
-                    </div>
+                    </Link>
                 </div>
             </div>
 
@@ -52,8 +52,13 @@ const Footer = () => {
                             <ul className="space-y-3">
                                 {links[0]!.products?.map((item) => {
                                     return (
-                                        <li className="text-sm" key={item.name}>
-                                            {item.name}
+                                        <li key={item.name}>
+                                            <Link
+                                                href={item.link}
+                                                className="text-sm hover:text-SpecialBlue text-muted"
+                                            >
+                                                {item.name}
+                                            </Link>
                                         </li>
                                     );
                                 })}
