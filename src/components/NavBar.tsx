@@ -70,11 +70,10 @@ const NavBar = () => {
                                                                         "a"
                                                                     )
                                                                 }
-                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue  cursor-pointer  font-medium gap-4 items-center ${
-                                                                    visible ==
-                                                                        "a" &&
+                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue  cursor-pointer  font-medium gap-4 items-center ${visible ==
+                                                                    "a" &&
                                                                     "bg-lightOpacityBlue"
-                                                                }`}
+                                                                    }`}
                                                             >
                                                                 <FaUser />
                                                                 <p>
@@ -88,11 +87,10 @@ const NavBar = () => {
                                                                         "b"
                                                                     )
                                                                 }
-                                                                className={`flex p-3 px-5 transition-colors duration-300 rounded-xl hover:bg-lightOpacityBlue cursor-pointer  font-medium gap-4 items-center ${
-                                                                    visible ==
-                                                                        "b" &&
+                                                                className={`flex p-3 px-5 transition-colors duration-300 rounded-xl hover:bg-lightOpacityBlue cursor-pointer  font-medium gap-4 items-center ${visible ==
+                                                                    "b" &&
                                                                     "bg-lightOpacityBlue"
-                                                                }`}
+                                                                    }`}
                                                             >
                                                                 <LiaBoxesSolid />
                                                                 <p>
@@ -106,11 +104,10 @@ const NavBar = () => {
                                                                         "c"
                                                                     )
                                                                 }
-                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue cursor-pointer   font-medium gap-4 items-center ${
-                                                                    visible ==
-                                                                        "c" &&
+                                                                className={`flex p-3 transition-colors duration-300 px-5 rounded-xl hover:bg-lightOpacityBlue cursor-pointer   font-medium gap-4 items-center ${visible ==
+                                                                    "c" &&
                                                                     "bg-lightOpacityBlue"
-                                                                }`}
+                                                                    }`}
                                                             >
                                                                 <GrRobot />
                                                                 <p>
@@ -123,11 +120,10 @@ const NavBar = () => {
                                                             <div className="w-[1rem] h-[100%] border-r mr-5" />
                                                         </div>
                                                         <div
-                                                            className={`${
-                                                                visible !==
-                                                                    "a" &&
+                                                            className={`${visible !==
+                                                                "a" &&
                                                                 "hidden"
-                                                            }`}
+                                                                }`}
                                                         >
                                                             <div className="grid grid-cols-3 gap-4">
                                                                 <ul className="space-y-5">
@@ -146,12 +142,11 @@ const NavBar = () => {
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
                                                                                     0
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -194,12 +189,11 @@ const NavBar = () => {
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
                                                                                     0
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -242,12 +236,11 @@ const NavBar = () => {
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
                                                                                     0
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -277,11 +270,10 @@ const NavBar = () => {
                                                             </div>
                                                         </div>
                                                         <div
-                                                            className={`${
-                                                                visible !==
-                                                                    "b" &&
+                                                            className={`${visible !==
+                                                                "b" &&
                                                                 "hidden"
-                                                            }`}
+                                                                }`}
                                                         >
                                                             <div className="grid grid-cols-3 gap-4">
                                                                 <ul className="space-y-5">
@@ -297,12 +289,11 @@ const NavBar = () => {
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
                                                                                     0
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -339,12 +330,11 @@ const NavBar = () => {
                                                                                 key={
                                                                                     items.title
                                                                                 }
-                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${
-                                                                                    counter ==
+                                                                                className={`flex transition-all -space-y-[0.1rem] duration-500 cursor-pointer rounded-xl p-4 text-sm space-x-3 ${counter ==
                                                                                     1
-                                                                                        ? "hover:bg-red-100/30"
-                                                                                        : "hover:bg-blue-100/30"
-                                                                                }`}
+                                                                                    ? "hover:bg-red-100/30"
+                                                                                    : "hover:bg-blue-100/30"
+                                                                                    }`}
                                                                             >
                                                                                 <span
                                                                                     style={{
@@ -405,11 +395,10 @@ const NavBar = () => {
                                                         </div>
 
                                                         <div
-                                                            className={`${
-                                                                visible !==
-                                                                    "c" &&
+                                                            className={`${visible !==
+                                                                "c" &&
                                                                 "hidden"
-                                                            }`}
+                                                                }`}
                                                         >
                                                             <div className="flex  space-x-4">
                                                                 <div className="bg-blue-200/30 border rounded-xl p-5 space-y-5">
@@ -644,10 +633,9 @@ const NavBar = () => {
                                 } else {
                                     return (
                                         <li
-                                            className={`${
-                                                active == items.link &&
+                                            className={`${active == items.link &&
                                                 "text-blue-500"
-                                            } cursor-pointer font-medium`}
+                                                } cursor-pointer font-medium`}
                                             key={items.name}
                                             onClick={() => {
                                                 setIsOpen((prev) => !prev);
@@ -735,10 +723,9 @@ const NavBar = () => {
                                         } else {
                                             return (
                                                 <li
-                                                    className={`${
-                                                        active == items.link &&
+                                                    className={`${active == items.link &&
                                                         "text-blue-500"
-                                                    } cursor-pointer font-medium`}
+                                                        } cursor-pointer font-medium`}
                                                     key={items.name}
                                                     onClick={() => {
                                                         setIsOpen(
@@ -757,10 +744,14 @@ const NavBar = () => {
                                 </ul>
 
                                 <div className="space-y-4 px-4 my-6">
-                                    <button className="bg-[#EAF3FF] text-[#1A73E8]  text-center w-full p-3 rounded-xl">
+                                    <button onClick={() => {
+                                        navigate.push("https://emmanuel-loubby-app.netlify.app/onboarding/login")
+                                    }} className="bg-[#EAF3FF] text-[#1A73E8]  text-center w-full p-3 rounded-xl">
                                         Login
                                     </button>
-                                    <button className="bg-[#1A73E8] hover:bg-blue-700 transition duration-200 text-white text-center w-full p-3 rounded-xl">
+                                    <button onClick={() => {
+                                        navigate.push("https://emmanuel-loubby-app.netlify.app/onboarding/login")
+                                    }} className="bg-[#1A73E8] hover:bg-blue-700 transition duration-200 text-white text-center w-full p-3 rounded-xl">
                                         Get Started
                                     </button>
                                 </div>
@@ -779,10 +770,14 @@ const NavBar = () => {
                 </div>
 
                 <div className="space-x-2 hidden md:flex">
-                    <Button className="bg-lightOpacityBlue  text-blue-800 font-semibold px-5 rounded-lg p-3">
+                    <Button onClick={() => {
+                        navigate.push("https://emmanuel-loubby-app.netlify.app/onboarding/login")
+                    }} className="bg-lightOpacityBlue  text-blue-800 font-semibold px-5 rounded-lg p-3">
                         Sign up/Login
                     </Button>
-                    <Button className="bg-primaryBlue  text-white font-semibold px-5 rounded-lg p-3">
+                    <Button onClick={() => {
+                        navigate.push("https://emmanuel-loubby-app.netlify.app/onboarding/login")
+                    }} className="bg-primaryBlue  text-white font-semibold px-5 rounded-lg p-3">
                         Book a Demo
                     </Button>
                 </div>

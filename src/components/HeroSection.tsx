@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -20,9 +21,9 @@ const HeroSection = () => {
                 </p>
             </div>
             <div className="flex my-7 relative justify-center">
-                <button className="bg-primaryBlue relative z-40 hover:bg-blue-700 text-white font-semibold p-3 px-6 rounded-lg">
+                <Link href={"https://emmanuel-loubby-app.netlify.app/onboarding/login"} className="bg-primaryBlue relative z-40 hover:bg-blue-700 text-white font-semibold p-3 px-6 rounded-lg">
                     Try Loubby For Free
-                </button>
+                </Link>
             </div>
 
             <div className="flex items-center relative z-50 px-6 md:px-0 justify-center">
